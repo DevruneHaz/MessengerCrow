@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/MessengerCrow.main.iml" filepath="$PROJECT_DIR$/.idea/modules/MessengerCrow.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/MessengerCrow.test.iml" filepath="$PROJECT_DIR$/.idea/modules/MessengerCrow.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/messenger_crow_mod_V1.3.2_OLD.main.iml" filepath="$PROJECT_DIR$/.idea/modules/messenger_crow_mod_V1.3.2_OLD.main.iml" />
+    </modules>
+  </component>
+</project>

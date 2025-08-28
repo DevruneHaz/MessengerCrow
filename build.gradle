@@ -1,11 +1,6 @@
 plugins {
-    id 'eclipse'
     id 'net.minecraftforge.gradle' version '[6.0.16,6.2)'
 }
-
-version = '1.0'
-group = 'com.yourname.modid'
-archivesBaseName = 'modid'
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
@@ -18,10 +13,6 @@ minecraft {
 
     runs {
         client {
-            def mcreatorJvmOptions = System.getenv('MCREATOR_JVM_OPTIONS')
-            if (mcreatorJvmOptions) {
-                jvmArgs += mcreatorJvmOptions.split("\\s+").findAll { it.trim() }.toList()
-            }
         }
 
         server {
@@ -42,13 +33,37 @@ minecraft {
     }
 }
 
-dependencies {
-    minecraft 'net.minecraftforge:forge:1.20.1-47.3.0'
-}
-
 tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8' // Use the UTF-8 charset for Java compilation
 }
 
-apply from: 'mcreator.gradle'
+
+repositories {
+    maven {
+        url = 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/'
+    }
+}
+
+dependencies {
+    minecraft 'net.minecraftforge:forge:1.20.1-47.3.0'
+    implementation fg.deobf('software.bernie.geckolib:geckolib-forge-1.20.1:4.4.2')
+}
+
+minecraft {
+    runs {
+        client {
+            property 'mixin.env.remapRefMap', 'true'
+            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
+        }
+        server {
+            property 'mixin.env.remapRefMap', 'true'
+            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
+        }
+        data {
+            property 'mixin.env.remapRefMap', 'true'
+            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
+        }
+    }
+}
+
 

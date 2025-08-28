@@ -1,0 +1,307 @@
+{
+  "_fv": 73,
+  "_type": "animatedblock",
+  "definition": {
+    "texture": "lectern_scroll",
+    "textureTop": "",
+    "textureLeft": "",
+    "textureFront": "",
+    "textureRight": "",
+    "textureBack": "",
+    "renderType": 0,
+    "rotationMode": 1,
+    "enablePitch": false,
+    "emissiveRendering": false,
+    "displayFluidOverlay": false,
+    "animateBlockItem": false,
+    "itemTexture": "",
+    "particleTexture": "minecraft:lectern_sides",
+    "tintType": "No tint",
+    "isItemTinted": false,
+    "hasTransparency": true,
+    "connectedSides": false,
+    "transparencyType": "CUTOUT_MIPPED",
+    "disableOffset": false,
+    "boundingBoxes": [
+      {
+        "mx": 0.0,
+        "my": 0.0,
+        "mz": 0.0,
+        "Mx": 16.0,
+        "My": 2.0,
+        "Mz": 16.0,
+        "subtract": false
+      },
+      {
+        "mx": 4.0,
+        "my": 2.0,
+        "mz": 4.0,
+        "Mx": 12.0,
+        "My": 15.0,
+        "Mz": 12.0,
+        "subtract": false
+      },
+      {
+        "mx": 0.0,
+        "my": 10.0,
+        "mz": 1.0,
+        "Mx": 16.0,
+        "My": 14.0,
+        "Mz": 5.333,
+        "subtract": false
+      },
+      {
+        "mx": 0.0,
+        "my": 12.0,
+        "mz": 5.333,
+        "Mx": 16.0,
+        "My": 16.0,
+        "Mz": 9.667,
+        "subtract": false
+      },
+      {
+        "mx": 0.0,
+        "my": 14.0,
+        "mz": 9.667,
+        "Mx": 16.0,
+        "My": 18.0,
+        "Mz": 14.0,
+        "subtract": false
+      }
+    ],
+    "name": "Scroll Lectern",
+    "specialInformation": {
+      "fixedValue": []
+    },
+    "hardness": 2.5,
+    "resistance": 2.5,
+    "hasGravity": false,
+    "isWaterloggable": false,
+    "creativeTabs": [],
+    "destroyTool": "axe",
+    "customDrop": {
+      "value": "Blocks.LECTERN"
+    },
+    "dropAmount": 1,
+    "useLootTableForDrops": false,
+    "requiresCorrectTool": false,
+    "enchantPowerBonus": 0.0,
+    "plantsGrowOn": false,
+    "canRedstoneConnect": false,
+    "lightOpacity": 0,
+    "material": {
+      "value": "NONE"
+    },
+    "tickRate": 0,
+    "tickRandomly": false,
+    "isReplaceable": false,
+    "canProvidePower": false,
+    "emittedRedstonePower": {
+      "fixedValue": 15.0
+    },
+    "colorOnMap": "DEFAULT",
+    "creativePickItem": {
+      "value": "Blocks.LECTERN"
+    },
+    "offsetType": "NONE",
+    "aiPathNodeType": "DEFAULT",
+    "flammability": 0,
+    "fireSpreadSpeed": 0,
+    "isLadder": false,
+    "slipperiness": 0.6,
+    "speedFactor": 1.0,
+    "jumpFactor": 1.0,
+    "animationCount": 1,
+    "reactionToPushing": "BLOCK",
+    "isNotColidable": false,
+    "isCustomSoundType": false,
+    "soundOnStep": {
+      "value": "WOOD"
+    },
+    "breakSound": {
+      "value": ""
+    },
+    "fallSound": {
+      "value": ""
+    },
+    "hitSound": {
+      "value": ""
+    },
+    "placeSound": {
+      "value": ""
+    },
+    "stepSound": {
+      "value": ""
+    },
+    "luminance": 0,
+    "unbreakable": false,
+    "breakHarvestLevel": 0,
+    "hasInventory": true,
+    "guiBoundTo": "<NONE>",
+    "openGUIOnRightClick": false,
+    "inventorySize": 1,
+    "inventoryStackSize": 64,
+    "inventoryDropWhenDestroyed": true,
+    "inventoryComparatorPower": true,
+    "generateFeature": false,
+    "inventoryOutSlotIDs": [],
+    "inventoryInSlotIDs": [
+      0
+    ],
+    "hasEnergyStorage": false,
+    "energyInitial": 0,
+    "energyCapacity": 400000,
+    "energyMaxReceive": 200,
+    "energyMaxExtract": 200,
+    "isFluidTank": false,
+    "fluidCapacity": 8000,
+    "fluidRestrictions": [],
+    "onRightClicked": {
+      "name": "ScrollLecternOpenGui"
+    },
+    "restrictionBiomes": [],
+    "blocksToReplace": [
+      {
+        "value": "TAG:stone_ore_replaceables"
+      }
+    ],
+    "generationShape": "UNIFORM",
+    "frequencyPerChunks": 10,
+    "frequencyOnChunk": 16,
+    "minGenerateHeight": 0,
+    "maxGenerateHeight": 64,
+    "normal": "scroll_lectern.geo.json",
+    "displaySettings": "scroll_lectern.json",
+    "vanillaToolTier": "NONE",
+    "blockstateList": [
+      {
+        "texture": "black_lectern_scroll",
+        "particleTexture": "minecraft:lectern_sides",
+        "renderType": 0,
+        "customModelName": "scroll_lectern.geo.json",
+        "luminance": 0,
+        "boundingBoxes": []
+      },
+      {
+        "texture": "blue_lectern_scroll",
+        "particleTexture": "minecraft:lectern_sides",
+        "renderType": 0,
+        "customModelName": "scroll_lectern.geo.json",
+        "luminance": 0,
+        "boundingBoxes": []
+      },
+      {
+        "texture": "brown_lectern_scroll",
+        "particleTexture": "minecraft:lectern_sides",
+        "renderType": 0,
+        "customModelName": "scroll_lectern.geo.json",
+        "luminance": 0,
+        "boundingBoxes": []
+      },
+      {
+        "texture": "cyan_lectern_scroll",
+        "particleTexture": "minecraft:lectern_sides",
+        "renderType": 0,
+        "customModelName": "scroll_lectern.geo.json",
+        "luminance": 0,
+        "boundingBoxes": []
+      },
+      {
+        "texture": "gray_lectern_scroll",
+        "particleTexture": "minecraft:lectern_sides",
+        "renderType": 0,
+        "customModelName": "scroll_lectern.geo.json",
+        "luminance": 0,
+        "boundingBoxes": []
+      },
+      {
+        "texture": "green_lectern_scroll",
+        "particleTexture": "minecraft:lectern_sides",
+        "renderType": 0,
+        "customModelName": "scroll_lectern.geo.json",
+        "luminance": 0,
+        "boundingBoxes": []
+      },
+      {
+        "texture": "light_blue_lectern_scroll",
+        "particleTexture": "minecraft:lectern_sides",
+        "renderType": 0,
+        "customModelName": "scroll_lectern.geo.json",
+        "luminance": 0,
+        "boundingBoxes": []
+      },
+      {
+        "texture": "light_gray_lectern_scroll",
+        "particleTexture": "minecraft:lectern_sides",
+        "renderType": 0,
+        "customModelName": "scroll_lectern.geo.json",
+        "luminance": 0,
+        "boundingBoxes": []
+      },
+      {
+        "texture": "lime_lectern_scroll",
+        "particleTexture": "minecraft:lectern_sides",
+        "renderType": 0,
+        "customModelName": "scroll_lectern.geo.json",
+        "luminance": 0,
+        "boundingBoxes": []
+      },
+      {
+        "texture": "magenta_lectern_scroll",
+        "particleTexture": "minecraft:lectern_sides",
+        "renderType": 0,
+        "customModelName": "scroll_lectern.geo.json",
+        "luminance": 0,
+        "boundingBoxes": []
+      },
+      {
+        "texture": "orange_lectern_scroll",
+        "particleTexture": "minecraft:lectern_sides",
+        "renderType": 0,
+        "customModelName": "scroll_lectern.geo.json",
+        "luminance": 0,
+        "boundingBoxes": []
+      },
+      {
+        "texture": "pink_lectern_scroll",
+        "particleTexture": "minecraft:lectern_sides",
+        "renderType": 0,
+        "customModelName": "scroll_lectern.geo.json",
+        "luminance": 0,
+        "boundingBoxes": []
+      },
+      {
+        "texture": "purple_lectern_scroll",
+        "particleTexture": "minecraft:lectern_sides",
+        "renderType": 0,
+        "customModelName": "scroll_lectern.geo.json",
+        "luminance": 0,
+        "boundingBoxes": []
+      },
+      {
+        "texture": "red_lectern_scroll",
+        "particleTexture": "minecraft:lectern_sides",
+        "renderType": 0,
+        "customModelName": "scroll_lectern.geo.json",
+        "luminance": 0,
+        "boundingBoxes": []
+      },
+      {
+        "texture": "white_lectern_scroll",
+        "particleTexture": "minecraft:lectern_sides",
+        "renderType": 0,
+        "customModelName": "scroll_lectern.geo.json",
+        "luminance": 0,
+        "boundingBoxes": []
+      },
+      {
+        "texture": "yellow_lectern_scroll",
+        "particleTexture": "minecraft:lectern_sides",
+        "renderType": 0,
+        "customModelName": "scroll_lectern.geo.json",
+        "luminance": 0,
+        "boundingBoxes": []
+      }
+    ]
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "crow_ambient": {
+    "subtitle": "subtitles.crow_ambient",
+    "sounds": [
+      {
+        "name": "messenger_crow:crow_ambient1",
+        "stream": false
+      },
+      {
+        "name": "messenger_crow:crow_ambient2",
+        "stream": false
+      }
+    ]
+  },
+  "crow_hurt": {
+    "subtitle": "subtitles.crow_hurt",
+    "sounds": [
+      {
+        "name": "messenger_crow:crow_hurt",
+        "stream": false
+      }
+    ]
+  },
+  "crow_poof": {
+    "subtitle": "subtitles.crow_poof",
+    "sounds": [
+      {
+        "name": "messenger_crow:crow_poof",
+        "stream": false
+      }
+    ]
+  }
+}

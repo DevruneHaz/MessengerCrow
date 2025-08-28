@@ -1,0 +1,6 @@
+{
+  "parent": "messenger_crow:displaysettings/scroll_lectern",
+  "textures": {
+    "particle": "messenger_crow:block/minecraft:lectern_sides"
+  }
+}

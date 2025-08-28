@@ -1,0 +1,2323 @@
+{
+  "mod_elements": [
+    {
+      "name": "Scroll",
+      "type": "item",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "scroll",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/messenger_crow/models/item/scroll_30.json",
+          "src/main/resources/assets/messenger_crow/models/item/scroll.json",
+          "src/main/java/net/mcreator/messenger_crow/item/ScrollItem.java",
+          "src/main/resources/assets/messenger_crow/models/item/scroll_19.json",
+          "src/main/resources/assets/messenger_crow/models/item/scroll_10.json",
+          "src/main/resources/assets/messenger_crow/models/item/scroll_16.json",
+          "src/main/resources/assets/messenger_crow/models/item/scroll_13.json",
+          "src/main/resources/assets/messenger_crow/models/item/scroll_21.json",
+          "src/main/java/net/mcreator/messenger_crow/item/inventory/ScrollInventoryCapability.java",
+          "src/main/resources/assets/messenger_crow/models/item/scroll_6.json",
+          "src/main/resources/assets/messenger_crow/models/item/scroll_0.json",
+          "src/main/resources/assets/messenger_crow/models/item/scroll_3.json",
+          "src/main/resources/assets/messenger_crow/models/item/scroll_27.json",
+          "src/main/resources/assets/messenger_crow/models/item/scroll_32.json",
+          "src/main/resources/assets/messenger_crow/models/item/scroll_24.json",
+          "src/main/resources/assets/messenger_crow/models/item/scroll_9.json",
+          "src/main/resources/assets/messenger_crow/models/item/scroll_8.json",
+          "src/main/resources/assets/messenger_crow/models/item/scroll_12.json",
+          "src/main/resources/assets/messenger_crow/models/item/scroll_20.json",
+          "src/main/resources/assets/messenger_crow/models/item/scroll_29.json",
+          "src/main/resources/assets/messenger_crow/models/item/scroll_26.json",
+          "src/main/resources/assets/messenger_crow/models/item/scroll_15.json",
+          "src/main/resources/assets/messenger_crow/models/item/scroll_23.json",
+          "src/main/resources/assets/messenger_crow/models/item/scroll_2.json",
+          "src/main/resources/assets/messenger_crow/models/item/scroll_18.json",
+          "src/main/resources/assets/messenger_crow/models/item/scroll_31.json",
+          "src/main/resources/assets/messenger_crow/models/item/scroll_5.json",
+          "src/main/resources/assets/messenger_crow/models/item/scroll_14.json",
+          "src/main/resources/assets/messenger_crow/models/item/scroll_17.json",
+          "src/main/resources/assets/messenger_crow/models/item/scroll_11.json",
+          "src/main/resources/assets/messenger_crow/models/item/scroll_28.json",
+          "src/main/resources/assets/messenger_crow/models/item/scroll_4.json",
+          "src/main/resources/assets/messenger_crow/models/item/scroll_7.json",
+          "src/main/resources/assets/messenger_crow/models/item/scroll_22.json",
+          "src/main/resources/assets/messenger_crow/models/item/scroll_25.json",
+          "src/main/resources/assets/messenger_crow/models/item/scroll_1.json"
+        ]
+      },
+      "path": "~/Scroll"
+    },
+    {
+      "name": "ScrollGUI",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scroll_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/messenger_crow/world/inventory/ScrollGUIMenu.java",
+          "src/main/java/net/mcreator/messenger_crow/client/gui/ScrollGUIScreen.java"
+        ]
+      },
+      "path": "~/Scroll"
+    },
+    {
+      "name": "ScrollSeal",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scroll_seal",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/messenger_crow/procedures/ScrollSealProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "guistate",
+            "type": "map"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Scroll"
+    },
+    {
+      "name": "ScrollSealedTexture",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scroll_sealed_texture",
+      "metadata": {
+        "return_type": "number",
+        "files": [
+          "src/main/java/net/mcreator/messenger_crow/procedures/ScrollSealedTextureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/Scroll"
+    },
+    {
+      "name": "ScrollRightClicked",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scroll_right_clicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/messenger_crow/procedures/ScrollRightClickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/Scroll"
+    },
+    {
+      "name": "CrowInventory",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crow_inventory",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/messenger_crow/client/gui/CrowInventoryScreen.java",
+          "src/main/java/net/mcreator/messenger_crow/world/inventory/CrowInventoryMenu.java"
+        ]
+      },
+      "path": "~/Crow"
+    },
+    {
+      "name": "ScrollTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scroll_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/messenger_crow/procedures/ScrollTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/Scroll"
+    },
+    {
+      "name": "CrowFeather",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crow_feather",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/messenger_crow/models/item/crow_feather.json",
+          "src/main/java/net/mcreator/messenger_crow/item/CrowFeatherItem.java"
+        ]
+      },
+      "path": "~/Crow"
+    },
+    {
+      "name": "CrowTeleport",
+      "type": "particle",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crow_teleport",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/messenger_crow/particles/crow_teleport.json",
+          "src/main/java/net/mcreator/messenger_crow/client/particle/CrowTeleportParticle.java"
+        ]
+      },
+      "path": "~/Crow"
+    },
+    {
+      "name": "Scarecrow",
+      "type": "animatedblock",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scarecrow",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/messenger_crow/block/model/ScarecrowDisplayModel.java",
+          "src/main/java/net/mcreator/messenger_crow/block/entity/ScarecrowTileEntity.java",
+          "src/main/java/net/mcreator/messenger_crow/block/renderer/ScarecrowTileRenderer.java",
+          "src/main/java/net/mcreator/messenger_crow/block/display/ScarecrowDisplayItem.java",
+          "src/main/java/net/mcreator/messenger_crow/block/model/ScarecrowBlockModel.java",
+          "src/main/java/net/mcreator/messenger_crow/block/ScarecrowBlock.java",
+          "src/main/resources/assets/messenger_crow/models/item/scarecrow.json",
+          "src/main/resources/assets/messenger_crow/models/block/scarecrow_blockstate_0.json",
+          "src/main/resources/assets/messenger_crow/blockstates/scarecrow.json",
+          "src/main/resources/assets/messenger_crow/models/custom/scarecrow_particle.json",
+          "src/main/java/net/mcreator/messenger_crow/block/renderer/ScarecrowDisplayItemRenderer.java"
+        ]
+      },
+      "path": "~/Scarecrow"
+    },
+    {
+      "name": "ScarecrowRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scarecrow_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/messenger_crow/recipes/scarecrow_recipe.json"
+        ]
+      },
+      "path": "~/Scarecrow"
+    },
+    {
+      "name": "FeatherFan",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "feather_fan",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/messenger_crow/models/item/feather_fan.json",
+          "src/main/java/net/mcreator/messenger_crow/item/FeatherFanItem.java"
+        ]
+      },
+      "path": "~/FeatherFan"
+    },
+    {
+      "name": "FeatherFanFlapping",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "feather_fan_flapping",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/messenger_crow/procedures/FeatherFanFlappingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/FeatherFan"
+    },
+    {
+      "name": "FeatherFanRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "feather_fan_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/messenger_crow/recipes/feather_fan_recipe.json"
+        ]
+      },
+      "path": "~/FeatherFan"
+    },
+    {
+      "name": "ScrollGUITextSave",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scroll_gui_text_save",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/messenger_crow/procedures/ScrollGUITextSaveProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "guistate",
+            "type": "map"
+          }
+        ]
+      },
+      "path": "~/Scroll"
+    },
+    {
+      "name": "AddScrollToLectern",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "add_scroll_to_lectern",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/messenger_crow/procedures/AddScrollToLecternProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Scroll/Scroll Lectern"
+    },
+    {
+      "name": "ScrollLecternGUI",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "scroll_lectern_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/messenger_crow/network/ScrollLecternGUIButtonMessage.java",
+          "src/main/java/net/mcreator/messenger_crow/client/gui/ScrollLecternGUIScreen.java",
+          "src/main/java/net/mcreator/messenger_crow/world/inventory/ScrollLecternGUIMenu.java"
+        ]
+      },
+      "path": "~/Scroll/Scroll Lectern"
+    },
+    {
+      "name": "ScrollGUIClose",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scroll_gui_close",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/messenger_crow/procedures/ScrollGUICloseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Scroll"
+    },
+    {
+      "name": "ScrollRibbonTexture",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scroll_ribbon_texture",
+      "metadata": {
+        "return_type": "number",
+        "files": [
+          "src/main/java/net/mcreator/messenger_crow/procedures/ScrollRibbonTextureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/Scroll"
+    },
+    {
+      "name": "BlackScrollRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "black_scroll_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/messenger_crow/recipes/black_scroll_recipe.json"
+        ]
+      },
+      "path": "~/Scroll/Recipe"
+    },
+    {
+      "name": "BlackRibbonRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "black_ribbon_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/messenger_crow/recipes/black_ribbon_recipe.json"
+        ]
+      },
+      "path": "~/Ribbon/recipe"
+    },
+    {
+      "name": "BlueRibbonRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blue_ribbon_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/messenger_crow/recipes/blue_ribbon_recipe.json"
+        ]
+      },
+      "path": "~/Ribbon/recipe"
+    },
+    {
+      "name": "BrownRibbonRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "brown_ribbon_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/messenger_crow/recipes/brown_ribbon_recipe.json"
+        ]
+      },
+      "path": "~/Ribbon/recipe"
+    },
+    {
+      "name": "CyanRibbonRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cyan_ribbon_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/messenger_crow/recipes/cyan_ribbon_recipe.json"
+        ]
+      },
+      "path": "~/Ribbon/recipe"
+    },
+    {
+      "name": "GrayRibbonRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gray_ribbon_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/messenger_crow/recipes/gray_ribbon_recipe.json"
+        ]
+      },
+      "path": "~/Ribbon/recipe"
+    },
+    {
+      "name": "GreenRibbonRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "green_ribbon_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/messenger_crow/recipes/green_ribbon_recipe.json"
+        ]
+      },
+      "path": "~/Ribbon/recipe"
+    },
+    {
+      "name": "LightBlueRibbonRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "light_blue_ribbon_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/messenger_crow/recipes/light_blue_ribbon_recipe.json"
+        ]
+      },
+      "path": "~/Ribbon/recipe"
+    },
+    {
+      "name": "LightGrayRibbonRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "light_gray_ribbon_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/messenger_crow/recipes/light_gray_ribbon_recipe.json"
+        ]
+      },
+      "path": "~/Ribbon/recipe"
+    },
+    {
+      "name": "LimeRibbonRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lime_ribbon_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/messenger_crow/recipes/lime_ribbon_recipe.json"
+        ]
+      },
+      "path": "~/Ribbon/recipe"
+    },
+    {
+      "name": "MagentaRibbonRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "magenta_ribbon_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/messenger_crow/recipes/magenta_ribbon_recipe.json"
+        ]
+      },
+      "path": "~/Ribbon/recipe"
+    },
+    {
+      "name": "OrangeRibbonRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "orange_ribbon_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/messenger_crow/recipes/orange_ribbon_recipe.json"
+        ]
+      },
+      "path": "~/Ribbon/recipe"
+    },
+    {
+      "name": "PinkRibbonRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pink_ribbon_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/messenger_crow/recipes/pink_ribbon_recipe.json"
+        ]
+      },
+      "path": "~/Ribbon/recipe"
+    },
+    {
+      "name": "PurpleRibbonRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "purple_ribbon_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/messenger_crow/recipes/purple_ribbon_recipe.json"
+        ]
+      },
+      "path": "~/Ribbon/recipe"
+    },
+    {
+      "name": "RedRibbonRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "red_ribbon_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/messenger_crow/recipes/red_ribbon_recipe.json"
+        ]
+      },
+      "path": "~/Ribbon/recipe"
+    },
+    {
+      "name": "WhiteRibbonRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "white_ribbon_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/messenger_crow/recipes/white_ribbon_recipe.json"
+        ]
+      },
+      "path": "~/Ribbon/recipe"
+    },
+    {
+      "name": "YellowRibbonRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "yellow_ribbon_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/messenger_crow/recipes/yellow_ribbon_recipe.json"
+        ]
+      },
+      "path": "~/Ribbon/recipe"
+    },
+    {
+      "name": "BlueScrollRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "blue_scroll_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/messenger_crow/recipes/blue_scroll_recipe.json"
+        ]
+      },
+      "path": "~/Scroll/Recipe"
+    },
+    {
+      "name": "BrownScrollRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "brown_scroll_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/messenger_crow/recipes/brown_scroll_recipe.json"
+        ]
+      },
+      "path": "~/Scroll/Recipe"
+    },
+    {
+      "name": "CyanScrollRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "cyan_scroll_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/messenger_crow/recipes/cyan_scroll_recipe.json"
+        ]
+      },
+      "path": "~/Scroll/Recipe"
+    },
+    {
+      "name": "GrayScrollRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "gray_scroll_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/messenger_crow/recipes/gray_scroll_recipe.json"
+        ]
+      },
+      "path": "~/Scroll/Recipe"
+    },
+    {
+      "name": "GreenScrollRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "green_scroll_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/messenger_crow/recipes/green_scroll_recipe.json"
+        ]
+      },
+      "path": "~/Scroll/Recipe"
+    },
+    {
+      "name": "LightBlueScrollRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "light_blue_scroll_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/messenger_crow/recipes/light_blue_scroll_recipe.json"
+        ]
+      },
+      "path": "~/Scroll/Recipe"
+    },
+    {
+      "name": "LightGrayScrollRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "light_gray_scroll_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/messenger_crow/recipes/light_gray_scroll_recipe.json"
+        ]
+      },
+      "path": "~/Scroll/Recipe"
+    },
+    {
+      "name": "LimeScrollRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "lime_scroll_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/messenger_crow/recipes/lime_scroll_recipe.json"
+        ]
+      },
+      "path": "~/Scroll/Recipe"
+    },
+    {
+      "name": "MagentaScrollRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "magenta_scroll_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/messenger_crow/recipes/magenta_scroll_recipe.json"
+        ]
+      },
+      "path": "~/Scroll/Recipe"
+    },
+    {
+      "name": "OrangeScrollRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "orange_scroll_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/messenger_crow/recipes/orange_scroll_recipe.json"
+        ]
+      },
+      "path": "~/Scroll/Recipe"
+    },
+    {
+      "name": "PinkScrollRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "pink_scroll_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/messenger_crow/recipes/pink_scroll_recipe.json"
+        ]
+      },
+      "path": "~/Scroll/Recipe"
+    },
+    {
+      "name": "PurpleScrollRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "purple_scroll_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/messenger_crow/recipes/purple_scroll_recipe.json"
+        ]
+      },
+      "path": "~/Scroll/Recipe"
+    },
+    {
+      "name": "RedScrollRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "red_scroll_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/messenger_crow/recipes/red_scroll_recipe.json"
+        ]
+      },
+      "path": "~/Scroll/Recipe"
+    },
+    {
+      "name": "WhiteScrollRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "white_scroll_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/messenger_crow/recipes/white_scroll_recipe.json"
+        ]
+      },
+      "path": "~/Scroll/Recipe"
+    },
+    {
+      "name": "YellowScrollRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "yellow_scroll_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/messenger_crow/recipes/yellow_scroll_recipe.json"
+        ]
+      },
+      "path": "~/Scroll/Recipe"
+    },
+    {
+      "name": "BlackRibbon",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "black_ribbon",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/messenger_crow/item/BlackRibbonItem.java",
+          "src/main/resources/assets/messenger_crow/models/item/black_ribbon.json"
+        ]
+      },
+      "path": "~/Ribbon"
+    },
+    {
+      "name": "BlueRibbon",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blue_ribbon",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/messenger_crow/item/BlueRibbonItem.java",
+          "src/main/resources/assets/messenger_crow/models/item/blue_ribbon.json"
+        ]
+      },
+      "path": "~/Ribbon"
+    },
+    {
+      "name": "BrownRibbon",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "brown_ribbon",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/messenger_crow/item/BrownRibbonItem.java",
+          "src/main/resources/assets/messenger_crow/models/item/brown_ribbon.json"
+        ]
+      },
+      "path": "~/Ribbon"
+    },
+    {
+      "name": "CyanRibbon",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cyan_ribbon",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/messenger_crow/item/CyanRibbonItem.java",
+          "src/main/resources/assets/messenger_crow/models/item/cyan_ribbon.json"
+        ]
+      },
+      "path": "~/Ribbon"
+    },
+    {
+      "name": "GrayRibbon",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gray_ribbon",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/messenger_crow/item/GrayRibbonItem.java",
+          "src/main/resources/assets/messenger_crow/models/item/gray_ribbon.json"
+        ]
+      },
+      "path": "~/Ribbon"
+    },
+    {
+      "name": "GreenRibbon",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "green_ribbon",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/messenger_crow/item/GreenRibbonItem.java",
+          "src/main/resources/assets/messenger_crow/models/item/green_ribbon.json"
+        ]
+      },
+      "path": "~/Ribbon"
+    },
+    {
+      "name": "LightBlueRibbon",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "light_blue_ribbon",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/messenger_crow/models/item/light_blue_ribbon.json",
+          "src/main/java/net/mcreator/messenger_crow/item/LightBlueRibbonItem.java"
+        ]
+      },
+      "path": "~/Ribbon"
+    },
+    {
+      "name": "LightGrayRibbon",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "light_gray_ribbon",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/messenger_crow/models/item/light_gray_ribbon.json",
+          "src/main/java/net/mcreator/messenger_crow/item/LightGrayRibbonItem.java"
+        ]
+      },
+      "path": "~/Ribbon"
+    },
+    {
+      "name": "LimeRibbon",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lime_ribbon",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/messenger_crow/item/LimeRibbonItem.java",
+          "src/main/resources/assets/messenger_crow/models/item/lime_ribbon.json"
+        ]
+      },
+      "path": "~/Ribbon"
+    },
+    {
+      "name": "MagentaRibbon",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "magenta_ribbon",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/messenger_crow/item/MagentaRibbonItem.java",
+          "src/main/resources/assets/messenger_crow/models/item/magenta_ribbon.json"
+        ]
+      },
+      "path": "~/Ribbon"
+    },
+    {
+      "name": "OrangeRibbon",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "orange_ribbon",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/messenger_crow/models/item/orange_ribbon.json",
+          "src/main/java/net/mcreator/messenger_crow/item/OrangeRibbonItem.java"
+        ]
+      },
+      "path": "~/Ribbon"
+    },
+    {
+      "name": "PinkRibbon",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pink_ribbon",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/messenger_crow/models/item/pink_ribbon.json",
+          "src/main/java/net/mcreator/messenger_crow/item/PinkRibbonItem.java"
+        ]
+      },
+      "path": "~/Ribbon"
+    },
+    {
+      "name": "PurpleRibbon",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "purple_ribbon",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/messenger_crow/models/item/purple_ribbon.json",
+          "src/main/java/net/mcreator/messenger_crow/item/PurpleRibbonItem.java"
+        ]
+      },
+      "path": "~/Ribbon"
+    },
+    {
+      "name": "RedRibbon",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "red_ribbon",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/messenger_crow/item/RedRibbonItem.java",
+          "src/main/resources/assets/messenger_crow/models/item/red_ribbon.json"
+        ]
+      },
+      "path": "~/Ribbon"
+    },
+    {
+      "name": "WhiteRibbon",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "white_ribbon",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/messenger_crow/item/WhiteRibbonItem.java",
+          "src/main/resources/assets/messenger_crow/models/item/white_ribbon.json"
+        ]
+      },
+      "path": "~/Ribbon"
+    },
+    {
+      "name": "YellowRibbon",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "yellow_ribbon",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/messenger_crow/models/item/yellow_ribbon.json",
+          "src/main/java/net/mcreator/messenger_crow/item/YellowRibbonItem.java"
+        ]
+      },
+      "path": "~/Ribbon"
+    },
+    {
+      "name": "BlackCrowOverlay",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "black_crow_overlay",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/messenger_crow/procedures/BlackCrowOverlayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Crow/CrowInvOverlay"
+    },
+    {
+      "name": "BlueCrowOverlay",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blue_crow_overlay",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/messenger_crow/procedures/BlueCrowOverlayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Crow/CrowInvOverlay"
+    },
+    {
+      "name": "BrownCrowOverlay",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "brown_crow_overlay",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/messenger_crow/procedures/BrownCrowOverlayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Crow/CrowInvOverlay"
+    },
+    {
+      "name": "CyanCrowOverlay",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cyan_crow_overlay",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/messenger_crow/procedures/CyanCrowOverlayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Crow/CrowInvOverlay"
+    },
+    {
+      "name": "GrayCrowOverlay",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gray_crow_overlay",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/messenger_crow/procedures/GrayCrowOverlayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Crow/CrowInvOverlay"
+    },
+    {
+      "name": "GreenCrowOverlay",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "green_crow_overlay",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/messenger_crow/procedures/GreenCrowOverlayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Crow/CrowInvOverlay"
+    },
+    {
+      "name": "LightBlueCrowOverlay",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "light_blue_crow_overlay",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/messenger_crow/procedures/LightBlueCrowOverlayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Crow/CrowInvOverlay"
+    },
+    {
+      "name": "LightGrayCrowOverlay",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "light_gray_crow_overlay",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/messenger_crow/procedures/LightGrayCrowOverlayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Crow/CrowInvOverlay"
+    },
+    {
+      "name": "LimeCrowOverlay",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lime_crow_overlay",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/messenger_crow/procedures/LimeCrowOverlayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Crow/CrowInvOverlay"
+    },
+    {
+      "name": "MagentaCrowOverlay",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "magenta_crow_overlay",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/messenger_crow/procedures/MagentaCrowOverlayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Crow/CrowInvOverlay"
+    },
+    {
+      "name": "OrangeCrowOverlay",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "orange_crow_overlay",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/messenger_crow/procedures/OrangeCrowOverlayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Crow/CrowInvOverlay"
+    },
+    {
+      "name": "PinkCrowOverlay",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pink_crow_overlay",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/messenger_crow/procedures/PinkCrowOverlayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Crow/CrowInvOverlay"
+    },
+    {
+      "name": "PurpleCrowOverlay",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "purple_crow_overlay",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/messenger_crow/procedures/PurpleCrowOverlayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Crow/CrowInvOverlay"
+    },
+    {
+      "name": "RedCrowOverlay",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "red_crow_overlay",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/messenger_crow/procedures/RedCrowOverlayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Crow/CrowInvOverlay"
+    },
+    {
+      "name": "WhiteCrowOverlay",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "white_crow_overlay",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/messenger_crow/procedures/WhiteCrowOverlayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Crow/CrowInvOverlay"
+    },
+    {
+      "name": "YellowCrowOverlay",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "yellow_crow_overlay",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/messenger_crow/procedures/YellowCrowOverlayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Crow/CrowInvOverlay"
+    },
+    {
+      "name": "ScrollLectern",
+      "type": "animatedblock",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scroll_lectern",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/messenger_crow/block/model/ScrollLecternBlockModel.java",
+          "src/main/resources/assets/messenger_crow/models/block/scroll_lectern_blockstate_4.json",
+          "src/main/resources/assets/messenger_crow/models/block/scroll_lectern_blockstate_13.json",
+          "src/main/java/net/mcreator/messenger_crow/block/renderer/ScrollLecternTileRenderer.java",
+          "src/main/resources/assets/messenger_crow/models/block/scroll_lectern_blockstate_1.json",
+          "src/main/resources/assets/messenger_crow/blockstates/scroll_lectern.json",
+          "src/main/resources/assets/messenger_crow/models/block/scroll_lectern_blockstate_9.json",
+          "src/main/resources/assets/messenger_crow/models/custom/scroll_lectern_particle.json",
+          "src/main/java/net/mcreator/messenger_crow/block/ScrollLecternBlock.java",
+          "src/main/resources/assets/messenger_crow/models/block/scroll_lectern_blockstate_2.json",
+          "src/main/resources/assets/messenger_crow/models/block/scroll_lectern_blockstate_15.json",
+          "src/main/resources/assets/messenger_crow/models/block/scroll_lectern_blockstate_12.json",
+          "src/main/resources/assets/messenger_crow/models/block/scroll_lectern_blockstate_5.json",
+          "src/main/resources/assets/messenger_crow/models/block/scroll_lectern_blockstate_11.json",
+          "src/main/resources/assets/messenger_crow/models/block/scroll_lectern_blockstate_8.json",
+          "src/main/resources/assets/messenger_crow/models/block/scroll_lectern_blockstate_14.json",
+          "src/main/java/net/mcreator/messenger_crow/block/display/ScrollLecternDisplayItem.java",
+          "src/main/java/net/mcreator/messenger_crow/block/renderer/ScrollLecternDisplayItemRenderer.java",
+          "src/main/java/net/mcreator/messenger_crow/block/entity/ScrollLecternTileEntity.java",
+          "src/main/resources/assets/messenger_crow/models/block/scroll_lectern_blockstate_0.json",
+          "src/main/resources/assets/messenger_crow/models/block/scroll_lectern_blockstate_6.json",
+          "src/main/resources/assets/messenger_crow/models/block/scroll_lectern_blockstate_3.json",
+          "src/main/resources/assets/messenger_crow/models/block/scroll_lectern_blockstate_10.json",
+          "src/main/java/net/mcreator/messenger_crow/block/model/ScrollLecternDisplayModel.java",
+          "src/main/resources/assets/messenger_crow/models/block/scroll_lectern_blockstate_7.json",
+          "src/main/resources/assets/messenger_crow/models/item/scroll_lectern.json"
+        ]
+      },
+      "path": "~/Scroll/Scroll Lectern"
+    },
+    {
+      "name": "ScrollLecternOpenGui",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scroll_lectern_open_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/messenger_crow/procedures/ScrollLecternOpenGuiProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "blockstate",
+            "type": "blockstate"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Scroll/Scroll Lectern"
+    },
+    {
+      "name": "BlackScrollLecternGUI",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "black_scroll_lectern_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/messenger_crow/client/gui/BlackScrollLecternGUIScreen.java",
+          "src/main/java/net/mcreator/messenger_crow/network/BlackScrollLecternGUIButtonMessage.java",
+          "src/main/java/net/mcreator/messenger_crow/world/inventory/BlackScrollLecternGUIMenu.java"
+        ]
+      },
+      "path": "~/Scroll/Scroll Lectern/ScrollLecternGUI"
+    },
+    {
+      "name": "BlueScrollLecternGUI",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "blue_scroll_lectern_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/messenger_crow/client/gui/BlueScrollLecternGUIScreen.java",
+          "src/main/java/net/mcreator/messenger_crow/network/BlueScrollLecternGUIButtonMessage.java",
+          "src/main/java/net/mcreator/messenger_crow/world/inventory/BlueScrollLecternGUIMenu.java"
+        ]
+      },
+      "path": "~/Scroll/Scroll Lectern/ScrollLecternGUI"
+    },
+    {
+      "name": "BrownScrollLecternGUI",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "brown_scroll_lectern_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/messenger_crow/world/inventory/BrownScrollLecternGUIMenu.java",
+          "src/main/java/net/mcreator/messenger_crow/network/BrownScrollLecternGUIButtonMessage.java",
+          "src/main/java/net/mcreator/messenger_crow/client/gui/BrownScrollLecternGUIScreen.java"
+        ]
+      },
+      "path": "~/Scroll/Scroll Lectern/ScrollLecternGUI"
+    },
+    {
+      "name": "CyanScrollLecternGUI",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "cyan_scroll_lectern_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/messenger_crow/world/inventory/CyanScrollLecternGUIMenu.java",
+          "src/main/java/net/mcreator/messenger_crow/client/gui/CyanScrollLecternGUIScreen.java",
+          "src/main/java/net/mcreator/messenger_crow/network/CyanScrollLecternGUIButtonMessage.java"
+        ]
+      },
+      "path": "~/Scroll/Scroll Lectern/ScrollLecternGUI"
+    },
+    {
+      "name": "GrayScrollLecternGUI",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "gray_scroll_lectern_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/messenger_crow/client/gui/GrayScrollLecternGUIScreen.java",
+          "src/main/java/net/mcreator/messenger_crow/network/GrayScrollLecternGUIButtonMessage.java",
+          "src/main/java/net/mcreator/messenger_crow/world/inventory/GrayScrollLecternGUIMenu.java"
+        ]
+      },
+      "path": "~/Scroll/Scroll Lectern/ScrollLecternGUI"
+    },
+    {
+      "name": "GreenScrollLecternGUI",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "green_scroll_lectern_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/messenger_crow/network/GreenScrollLecternGUIButtonMessage.java",
+          "src/main/java/net/mcreator/messenger_crow/world/inventory/GreenScrollLecternGUIMenu.java",
+          "src/main/java/net/mcreator/messenger_crow/client/gui/GreenScrollLecternGUIScreen.java"
+        ]
+      },
+      "path": "~/Scroll/Scroll Lectern/ScrollLecternGUI"
+    },
+    {
+      "name": "LightBlueScrollLecternGUI",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "light_blue_scroll_lectern_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/messenger_crow/network/LightBlueScrollLecternGUIButtonMessage.java",
+          "src/main/java/net/mcreator/messenger_crow/world/inventory/LightBlueScrollLecternGUIMenu.java",
+          "src/main/java/net/mcreator/messenger_crow/client/gui/LightBlueScrollLecternGUIScreen.java"
+        ]
+      },
+      "path": "~/Scroll/Scroll Lectern/ScrollLecternGUI"
+    },
+    {
+      "name": "LightGrayScrollLecternGUI",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "light_gray_scroll_lectern_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/messenger_crow/world/inventory/LightGrayScrollLecternGUIMenu.java",
+          "src/main/java/net/mcreator/messenger_crow/client/gui/LightGrayScrollLecternGUIScreen.java",
+          "src/main/java/net/mcreator/messenger_crow/network/LightGrayScrollLecternGUIButtonMessage.java"
+        ]
+      },
+      "path": "~/Scroll/Scroll Lectern/ScrollLecternGUI"
+    },
+    {
+      "name": "LimeScrollLecternGUI",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "lime_scroll_lectern_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/messenger_crow/network/LimeScrollLecternGUIButtonMessage.java",
+          "src/main/java/net/mcreator/messenger_crow/world/inventory/LimeScrollLecternGUIMenu.java",
+          "src/main/java/net/mcreator/messenger_crow/client/gui/LimeScrollLecternGUIScreen.java"
+        ]
+      },
+      "path": "~/Scroll/Scroll Lectern/ScrollLecternGUI"
+    },
+    {
+      "name": "MagentaScrollLecternGUI",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "magenta_scroll_lectern_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/messenger_crow/world/inventory/MagentaScrollLecternGUIMenu.java",
+          "src/main/java/net/mcreator/messenger_crow/client/gui/MagentaScrollLecternGUIScreen.java",
+          "src/main/java/net/mcreator/messenger_crow/network/MagentaScrollLecternGUIButtonMessage.java"
+        ]
+      },
+      "path": "~/Scroll/Scroll Lectern/ScrollLecternGUI"
+    },
+    {
+      "name": "OrangeScrollLecternGUI",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "orange_scroll_lectern_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/messenger_crow/client/gui/OrangeScrollLecternGUIScreen.java",
+          "src/main/java/net/mcreator/messenger_crow/network/OrangeScrollLecternGUIButtonMessage.java",
+          "src/main/java/net/mcreator/messenger_crow/world/inventory/OrangeScrollLecternGUIMenu.java"
+        ]
+      },
+      "path": "~/Scroll/Scroll Lectern/ScrollLecternGUI"
+    },
+    {
+      "name": "PinkScrollLecternGUI",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "pink_scroll_lectern_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/messenger_crow/client/gui/PinkScrollLecternGUIScreen.java",
+          "src/main/java/net/mcreator/messenger_crow/network/PinkScrollLecternGUIButtonMessage.java",
+          "src/main/java/net/mcreator/messenger_crow/world/inventory/PinkScrollLecternGUIMenu.java"
+        ]
+      },
+      "path": "~/Scroll/Scroll Lectern/ScrollLecternGUI"
+    },
+    {
+      "name": "PurpleScrollLecternGUI",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "purple_scroll_lectern_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/messenger_crow/client/gui/PurpleScrollLecternGUIScreen.java",
+          "src/main/java/net/mcreator/messenger_crow/network/PurpleScrollLecternGUIButtonMessage.java",
+          "src/main/java/net/mcreator/messenger_crow/world/inventory/PurpleScrollLecternGUIMenu.java"
+        ]
+      },
+      "path": "~/Scroll/Scroll Lectern/ScrollLecternGUI"
+    },
+    {
+      "name": "RedScrollLecternGUI",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "red_scroll_lectern_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/messenger_crow/network/RedScrollLecternGUIButtonMessage.java",
+          "src/main/java/net/mcreator/messenger_crow/world/inventory/RedScrollLecternGUIMenu.java",
+          "src/main/java/net/mcreator/messenger_crow/client/gui/RedScrollLecternGUIScreen.java"
+        ]
+      },
+      "path": "~/Scroll/Scroll Lectern/ScrollLecternGUI"
+    },
+    {
+      "name": "WhiteScrollLecternGUI",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "white_scroll_lectern_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/messenger_crow/network/WhiteScrollLecternGUIButtonMessage.java",
+          "src/main/java/net/mcreator/messenger_crow/client/gui/WhiteScrollLecternGUIScreen.java",
+          "src/main/java/net/mcreator/messenger_crow/world/inventory/WhiteScrollLecternGUIMenu.java"
+        ]
+      },
+      "path": "~/Scroll/Scroll Lectern/ScrollLecternGUI"
+    },
+    {
+      "name": "YellowScrollLecternGUI",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "yellow_scroll_lectern_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/messenger_crow/network/YellowScrollLecternGUIButtonMessage.java",
+          "src/main/java/net/mcreator/messenger_crow/client/gui/YellowScrollLecternGUIScreen.java",
+          "src/main/java/net/mcreator/messenger_crow/world/inventory/YellowScrollLecternGUIMenu.java"
+        ]
+      },
+      "path": "~/Scroll/Scroll Lectern/ScrollLecternGUI"
+    },
+    {
+      "name": "PhantomCrowFeather",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "phantom_crow_feather",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/messenger_crow/item/PhantomCrowFeatherItem.java",
+          "src/main/resources/assets/messenger_crow/models/item/phantom_crow_feather.json"
+        ]
+      },
+      "path": "~/Crow"
+    },
+    {
+      "name": "CrowSkullMask",
+      "type": "armor",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crow_skull_mask",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/messenger_crow/models/item/crow_skull_mask_helmet.json",
+          "src/main/java/net/mcreator/messenger_crow/item/CrowSkullMaskItem.java"
+        ]
+      },
+      "path": "~/Crow"
+    },
+    {
+      "name": "CrowSkullMaskRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crow_skull_mask_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/messenger_crow/recipes/crow_skull_mask_recipe.json"
+        ]
+      },
+      "path": "~/Crow"
+    },
+    {
+      "name": "FillUsername",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fill_username",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/messenger_crow/procedures/FillUsernameProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "guistate",
+            "type": "map"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Scroll/Scroll Lectern"
+    },
+    {
+      "name": "ScarecrowLight",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scarecrow_light",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/messenger_crow/procedures/ScarecrowLightProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "blockstate",
+            "type": "blockstate"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Scarecrow"
+    },
+    {
+      "name": "Crow",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crow",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/messenger_crow/entity/CrowEntity.java",
+          "src/main/java/net/mcreator/messenger_crow/entity/model/CrowModel.java",
+          "src/main/java/net/mcreator/messenger_crow/client/renderer/CrowRenderer.java",
+          "src/main/java/net/mcreator/messenger_crow/entity/layer/CrowLayer.java"
+        ]
+      },
+      "path": "~/Crow"
+    },
+    {
+      "name": "CrowRightClicked",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crow_right_clicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/messenger_crow/procedures/CrowRightClickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Crow"
+    },
+    {
+      "name": "CrowTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crow_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/messenger_crow/procedures/CrowTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Crow"
+    },
+    {
+      "name": "CrowStruckByLighting",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crow_struck_by_lighting",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/messenger_crow/procedures/CrowStruckByLightingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Crow"
+    },
+    {
+      "name": "CrowVariant",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crow_variant",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/messenger_crow/procedures/CrowVariantProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Crow"
+    },
+    {
+      "name": "CrowOnSpawn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crow_on_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/messenger_crow/procedures/CrowOnSpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Crow"
+    },
+    {
+      "name": "CrowSit",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crow_sit",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/messenger_crow/procedures/CrowSitProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Crow"
+    },
+    {
+      "name": "CrowDropFeather",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crow_drop_feather",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/messenger_crow/procedures/CrowDropFeatherProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Crow"
+    },
+    {
+      "name": "CrowFollowTarget",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crow_follow_target",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/messenger_crow/procedures/CrowFollowTargetProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Crow"
+    },
+    {
+      "name": "CrowMovement",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crow_movement",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/messenger_crow/procedures/CrowMovementProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Crow"
+    },
+    {
+      "name": "AutoFillUser",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "auto_fill_user",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/messenger_crow/procedures/AutoFillUserProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Scroll/Scroll Lectern"
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [
+    {
+      "name": "crow_ambient",
+      "files": [
+        "crow_ambient1",
+        "crow_ambient2"
+      ],
+      "category": "neutral",
+      "subtitle": "crow cawing"
+    },
+    {
+      "name": "crow_hurt",
+      "files": [
+        "crow_hurt"
+      ],
+      "category": "neutral",
+      "subtitle": "crow hurt"
+    },
+    {
+      "name": "crow_poof",
+      "files": [
+        "crow_poof"
+      ],
+      "category": "neutral",
+      "subtitle": "crow poof"
+    }
+  ],
+  "tag_elements": {
+    "BLOCKS:minecraft:mineable/axe": [
+      "~CUSTOM:ScrollLectern",
+      "~CUSTOM:Scarecrow"
+    ]
+  },
+  "tab_element_order": {},
+  "language_map": {
+    "en_us": {
+      "gui.messenger_crow.gray_scroll_lectern_gui.Line1": "",
+      "gui.messenger_crow.gray_scroll_lectern_gui.Line2": "",
+      "gui.messenger_crow.brown_scroll_lectern_gui.button_empty1": "",
+      "gui.messenger_crow.gray_scroll_lectern_gui.Line3": "",
+      "gui.messenger_crow.blue_scroll_lectern_gui.Line2": "",
+      "gui.messenger_crow.blue_scroll_lectern_gui.Line3": "",
+      "gui.messenger_crow.blue_scroll_lectern_gui.Line1": "",
+      "gui.messenger_crows.crow_inventory.button_empty": "",
+      "gui.messenger_crow.gray_scroll_lectern_gui.button_empty1": "",
+      "gui.messenger_crow.black_scroll_lectern_gui.button_empty1": "",
+      "gui.messenger_crow.scroll_gui.Line2": "",
+      "gui.messenger_crow.scroll_gui.Line1": "",
+      "item.messenger_crow.blue_ribbon": "Ribbon",
+      "gui.messenger_crow.brown_scroll_lectern_gui.button_empty": "",
+      "item.messenger_crow.crow_skull_mask_helmet": "Crow Skull Mask",
+      "gui.messenger_crow.scroll_gui.Line3": "",
+      "gui.messenger_crow.cyan_scroll_lectern_gui.button_empty": "",
+      "item.messenger_crow.cyan_ribbon": "Ribbon",
+      "gui.messenger_crow.gray_scroll_lectern_gui.button_empty": "",
+      "gui.messenger_crow.light_gray_scroll_lectern_gui.button_empty1": "",
+      "gui.messenger_crow.lime_scroll_lectern_gui.button_empty1": "",
+      "gui.messenger_crow.cyan_scroll_lectern_gui.Line3": "",
+      "gui.messenger_crow.lime_scroll_lectern_gui.button_empty": "",
+      "gui.messenger_crow.cyan_scroll_lectern_gui.Line1": "",
+      "gui.messenger_crow.red_scroll_lectern_gui.Username": "Target Username",
+      "gui.messenger_crow.cyan_scroll_lectern_gui.Line2": "",
+      "gui.messenger_crow.light_blue_scroll_lectern_gui.Line3": "",
+      "gui.messenger_crow.scroll_lectern_gui.Usernames": "Target Username",
+      "gui.messenger_crow.light_blue_scroll_lectern_gui.Line1": "",
+      "gui.messenger_crow.light_blue_scroll_lectern_gui.Line2": "",
+      "gui.messenger_crow.yellow_scroll_lectern_gui.Username": "Target Username",
+      "gui.messenger_crow.scroll_gui.Username": "Target Username",
+      "gui.messenger_crow.blue_scroll_lectern_gui.button_empty1": "",
+      "gui.messenger_crow.magenta_scroll_lectern_gui.button_empty1": "",
+      "item.messenger_crow.phantom_crow_feather": "Phantom Crow Feather",
+      "gui.messenger_crow.green_scroll_lectern_gui.Username": "Target Username",
+      "item.messenger_crow.yellow_ribbon": "Ribbon",
+      "gui.messenger_crow.green_scroll_lectern_gui.button_empty1": "",
+      "gui.messenger_crow.black_scroll_lectern_gui.button_empty": "",
+      "gui.messenger_crow.orange_scroll_lectern_gui.Line1": "",
+      "gui.messenger_crow.lime_scroll_lectern_gui.Line3": "",
+      "gui.messenger_crow.orange_scroll_lectern_gui.Line3": "",
+      "gui.messenger_crow.orange_scroll_lectern_gui.Line2": "",
+      "gui.messenger_crows.scroll_gui.button_empty": "",
+      "gui.messenger_crow.lime_scroll_lectern_gui.Line2": "",
+      "gui.messenger_crow.lime_scroll_lectern_gui.Line1": "",
+      "gui.messenger_crow.brown_scroll_lectern_gui.Username": "Target Username",
+      "gui.messenger_crow.green_scroll_lectern_gui.button_empty": "",
+      "entity.messenger_crow.crow": "Crow",
+      "item.messenger_crow.purple_ribbon": "Ribbon",
+      "gui.messenger_crow.green_scroll_lectern_gui.Line3": "",
+      "gui.messenger_crow.green_scroll_lectern_gui.Line1": "",
+      "gui.messenger_crow.green_scroll_lectern_gui.Line2": "",
+      "item.messenger_crow.crow_spawn_egg": "Crow Spawn Egg",
+      "entity.messenger_crows.crow": "Crow",
+      "gui.messenger_crow.blue_scroll_lectern_gui.Username": "Target Username",
+      "gui.messenger_crow.pink_scroll_lectern_gui.Line2": "",
+      "gui.messenger_crow.pink_scroll_lectern_gui.Line3": "",
+      "gui.messenger_crow.orange_scroll_lectern_gui.Username": "Target Username",
+      "gui.messenger_crow.orange_scroll_lectern_gui.button_empty": "",
+      "gui.messenger_crow.pink_scroll_lectern_gui.Line1": "",
+      "gui.messenger_crow.yellow_scroll_lectern_gui.button_empty1": "",
+      "item.messenger_crow.scroll": "Scroll",
+      "gui.messenger_crow.blue_scroll_lectern_gui.button_empty": "",
+      "item.messenger_crow.light_blue_ribbon": "Ribbon",
+      "subtitles.crow_ambient": "crow cawing",
+      "gui.messenger_crow.white_scroll_lectern_gui.button_empty1": "",
+      "gui.messenger_crow.orange_scroll_lectern_gui.button_empty1": "",
+      "gui.messenger_crow.light_gray_scroll_lectern_gui.Line1": "",
+      "item.messenger_raven.raven_spawn_egg": "Raven Spawn Egg",
+      "gui.messenger_crow.black_scroll_lectern_gui.Username": "Target Username",
+      "gui.messenger_crow.light_gray_scroll_lectern_gui.Line3": "",
+      "gui.messenger_crow.light_gray_scroll_lectern_gui.Line2": "",
+      "item.messenger_crow.green_ribbon": "Ribbon",
+      "gui.messenger_crow.white_scroll_lectern_gui.button_empty": "",
+      "gui.messenger_crow.white_scroll_lectern_gui.Username": "Target Username",
+      "gui.messenger_crow.scroll_gui.button_empty": "",
+      "item.messenger_crow.light_gray_ribbon": "Ribbon",
+      "block.messenger_crow.scarecrow": "Scarecrow",
+      "gui.messenger_crow.cyan_scroll_lectern_gui.button_empty1": "",
+      "gui.messenger_crow.magenta_scroll_lectern_gui.Line3": "",
+      "block.messenger_crow.scroll_lectern": "Scroll Lectern",
+      "item.messenger_crows.scroll": "Scroll",
+      "gui.messenger_crow.purple_scroll_lectern_gui.button_empty1": "",
+      "gui.messenger_crow.red_scroll_lectern_gui.button_empty": "",
+      "gui.messenger_crow.yellow_scroll_lectern_gui.button_empty": "",
+      "item.messenger_crow.gray_ribbon": "Ribbon",
+      "gui.messenger_crow.pink_scroll_lectern_gui.button_empty": "",
+      "gui.messenger_crow.purple_scroll_lectern_gui.Line2": "",
+      "gui.messenger_crow.purple_scroll_lectern_gui.Line3": "",
+      "gui.messenger_crow.light_gray_scroll_lectern_gui.button_empty": "",
+      "gui.messenger_crow.magenta_scroll_lectern_gui.Username": "Target Username",
+      "gui.messenger_crow.purple_scroll_lectern_gui.Line1": "",
+      "item.messenger_crow.pink_ribbon": "Ribbon",
+      "gui.messenger_crow.yellow_scroll_lectern_gui.Line1": "",
+      "gui.messenger_crow.black_scroll_lectern_gui.Line2": "",
+      "gui.messenger_crow.light_gray_scroll_lectern_gui.Username": "Target Username",
+      "gui.messenger_crow.magenta_scroll_lectern_gui.button_empty": "",
+      "gui.messenger_crow.black_scroll_lectern_gui.Line1": "",
+      "gui.messenger_crow.lime_scroll_lectern_gui.Username": "Target Username",
+      "gui.messenger_crow.yellow_scroll_lectern_gui.Line2": "",
+      "gui.messenger_crow.black_scroll_lectern_gui.Line3": "",
+      "gui.messenger_crow.yellow_scroll_lectern_gui.Line3": "",
+      "item.messenger_crows.crow_spawn_egg": "Crow Spawn Egg",
+      "item.messenger_crow.crow_feather": "Crow Feather",
+      "item.messenger_crow.feather_fan": "Feather Fan",
+      "gui.messenger_crow.pink_scroll_lectern_gui.Username": "Target Username",
+      "gui.messenger_crow.scroll_lectern_gui.Line3": "",
+      "gui.messenger_crow.magenta_scroll_lectern_gui.Line1": "",
+      "item.messenger_crow.red_ribbon": "Ribbon",
+      "gui.messenger_crow.magenta_scroll_lectern_gui.Line2": "",
+      "gui.messenger_crow.scroll_lectern_gui.Line1": "",
+      "gui.messenger_crow.scroll_lectern_gui.Line2": "",
+      "gui.messenger_crow.light_blue_scroll_lectern_gui.button_empty1": "",
+      "item.messenger_crow.lime_ribbon": "Ribbon",
+      "item.messenger_crow.orange_ribbon": "Ribbon",
+      "item.messenger_crow.white_ribbon": "Ribbon",
+      "subtitles.crow_poof": "crow poof",
+      "gui.messenger_crow.gray_scroll_lectern_gui.Username": "Target Username",
+      "entity.messenger_raven.raven": "Raven",
+      "item.messenger_crow.brown_ribbon": "Ribbon",
+      "item.messenger_crow.black_ribbon": "Ribbon",
+      "subtitles.crow_hurt": "crow hurt",
+      "gui.messenger_crow.white_scroll_lectern_gui.Line3": "",
+      "gui.messenger_crow.cyan_scroll_lectern_gui.Username": "Target Username",
+      "gui.messenger_crow.light_blue_scroll_lectern_gui.button_empty": "",
+      "gui.messenger_crow.pink_scroll_lectern_gui.button_empty1": "",
+      "gui.messenger_crow.scroll_lectern_gui.Username": "Target Username",
+      "gui.messenger_crow.scroll_lectern_gui.button_empty1": "",
+      "gui.messenger_crow.purple_scroll_lectern_gui.Username": "Target Username",
+      "gui.messenger_crow.purple_scroll_lectern_gui.button_empty": "",
+      "gui.messenger_crow.red_scroll_lectern_gui.button_empty1": "",
+      "gui.messenger_crow.red_scroll_lectern_gui.Line2": "",
+      "gui.messenger_crow.red_scroll_lectern_gui.Line1": "",
+      "gui.messenger_crows.crow_inventory.tooltip_player_is_offline": "Player is offline",
+      "gui.messenger_crows.scroll_gui.Username": "Target Username",
+      "gui.messenger_crow.red_scroll_lectern_gui.Line3": "",
+      "item.messenger_crow.magenta_ribbon": "Ribbon",
+      "gui.messenger_crow.brown_scroll_lectern_gui.Line1": "",
+      "gui.messenger_crow.brown_scroll_lectern_gui.Line2": "",
+      "gui.messenger_crow.scroll_lectern_gui.button_empty": "",
+      "gui.messenger_crow.brown_scroll_lectern_gui.Line3": "",
+      "gui.messenger_crow.white_scroll_lectern_gui.Line1": "",
+      "gui.messenger_crow.white_scroll_lectern_gui.Line2": "",
+      "gui.messenger_crow.light_blue_scroll_lectern_gui.Username": "Target Username"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": [
+      {
+        "name": "Crow",
+        "children": [
+          {
+            "name": "CrowInvOverlay",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Scroll",
+        "children": [
+          {
+            "name": "Recipe",
+            "children": []
+          },
+          {
+            "name": "Scroll Lectern",
+            "children": [
+              {
+                "name": "ScrollLecternGUI",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Scarecrow",
+        "children": []
+      },
+      {
+        "name": "FeatherFan",
+        "children": []
+      },
+      {
+        "name": "Ribbon",
+        "children": [
+          {
+            "name": "recipe",
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "workspaceSettings": {
+    "modid": "messenger_crow",
+    "modName": "Messenger Crow",
+    "version": "1.3.2",
+    "description": "A new form of trade!",
+    "author": "Devrune, MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Not specified",
+    "serverSideOnly": false,
+    "modPicture": "crowlogo",
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [
+      "geckolib"
+    ],
+    "currentGenerator": "forge-1.20.1",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
+    "modElementsPackage": "net.mcreator.messenger_crow"
+  },
+  "mcreatorVersion": 202400452410
+}

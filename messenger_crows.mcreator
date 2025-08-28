@@ -1,0 +1,321 @@
+{
+  "mod_elements": [
+    {
+      "name": "Crow",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crow",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/messenger_crow/entity/CrowEntity.java",
+          "src/main/java/net/mcreator/messenger_crow/entity/model/CrowModel.java",
+          "src/main/resources/assets/messenger_crow/models/item/crow_spawn_egg.json",
+          "src/main/java/net/mcreator/messenger_crow/client/renderer/CrowRenderer.java",
+          "src/main/java/net/mcreator/messenger_crow/entity/layer/CrowLayer.java"
+        ]
+      },
+      "path": "~/Crow"
+    },
+    {
+      "name": "CrowRightClicked",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crow_right_clicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/messenger_crow/procedures/CrowRightClickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Crow"
+    },
+    {
+      "name": "CrowTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crow_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/messenger_crow/procedures/CrowTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Crow"
+    },
+    {
+      "name": "CrowStruckByLightning",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crow_struck_by_lightning",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/messenger_crow/procedures/CrowStruckByLightningProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Crow"
+    },
+    {
+      "name": "CrowVariant",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crow_variant",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/messenger_crow/procedures/CrowVariantProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Crow"
+    },
+    {
+      "name": "CrowOnSpawn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crow_on_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/messenger_crow/procedures/CrowOnSpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Crow"
+    },
+    {
+      "name": "Scroll",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scroll",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/messenger_crow/models/item/scroll.json",
+          "src/main/resources/assets/messenger_crow/models/item/scroll_0.json",
+          "src/main/java/net/mcreator/messenger_crow/item/ScrollItem.java",
+          "src/main/java/net/mcreator/messenger_crow/item/inventory/ScrollInventoryCapability.java"
+        ]
+      },
+      "path": "~/Scroll"
+    },
+    {
+      "name": "ScrollGUI",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scroll_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/messenger_crow/world/inventory/ScrollGUIMenu.java",
+          "src/main/java/net/mcreator/messenger_crow/network/ScrollGUIButtonMessage.java",
+          "src/main/java/net/mcreator/messenger_crow/client/gui/ScrollGUIScreen.java"
+        ]
+      },
+      "path": "~/Scroll"
+    },
+    {
+      "name": "ScrollSeal",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scroll_seal",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/messenger_crow/procedures/ScrollSealProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "guistate",
+            "type": "map"
+          }
+        ]
+      },
+      "path": "~/Scroll"
+    },
+    {
+      "name": "ScrollSealedTexture",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scroll_sealed_texture",
+      "metadata": {
+        "return_type": "number",
+        "files": [
+          "src/main/java/net/mcreator/messenger_crow/procedures/ScrollSealedTextureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/Scroll"
+    },
+    {
+      "name": "ScrollRightClicked",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scroll_right_clicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/messenger_crow/procedures/ScrollRightClickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/Scroll"
+    },
+    {
+      "name": "CrowInventory",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crow_inventory",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/messenger_crow/client/gui/CrowInventoryScreen.java",
+          "src/main/java/net/mcreator/messenger_crow/world/inventory/CrowInventoryMenu.java"
+        ]
+      },
+      "path": "~/Crow"
+    },
+    {
+      "name": "ScrollTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scroll_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/messenger_crow/procedures/ScrollTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/Scroll"
+    },
+    {
+      "name": "ScrollRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scroll_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/messenger_crow/recipes/scroll_recipe.json"
+        ]
+      },
+      "path": "~/Scroll"
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [],
+  "tag_elements": {},
+  "tab_element_order": {},
+  "language_map": {
+    "en_us": {
+      "gui.messenger_crow.scroll_gui.button_empty": "",
+      "entity.messenger_raven.raven": "Raven",
+      "gui.messenger_crows.crow_inventory.button_empty": "",
+      "entity.messenger_crow.crow": "Crow",
+      "item.messenger_crows.scroll": "Scroll",
+      "gui.messenger_crows.crow_inventory.tooltip_player_is_offline": "Player is offline",
+      "item.messenger_crow.scroll": "Scroll",
+      "gui.messenger_crows.scroll_gui.Username": "Target Username",
+      "item.messenger_crows.crow_spawn_egg": "Crow Spawn Egg",
+      "gui.messenger_crow.scroll_gui.Username": "Target Username",
+      "item.messenger_raven.raven_spawn_egg": "Raven Spawn Egg",
+      "gui.messenger_crows.scroll_gui.button_empty": "",
+      "item.messenger_crow.crow_spawn_egg": "Crow Spawn Egg",
+      "entity.messenger_crows.crow": "Crow"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": [
+      {
+        "name": "Crow",
+        "children": []
+      },
+      {
+        "name": "Scroll",
+        "children": []
+      }
+    ]
+  },
+  "workspaceSettings": {
+    "modid": "messenger_crow",
+    "modName": "Messenger Crow",
+    "version": "1.0.0",
+    "author": "Devrune, MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Not specified",
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [
+      "geckolib"
+    ],
+    "currentGenerator": "forge-1.20.1",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
+    "modElementsPackage": "net.mcreator.messenger_crow"
+  },
+  "mcreatorVersion": 202400342716
+}

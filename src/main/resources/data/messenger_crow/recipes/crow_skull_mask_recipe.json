@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "aba",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "messenger_crow:phantom_crow_feather"
+    },
+    "b": {
+      "item": "minecraft:skeleton_skull"
+    }
+  },
+  "result": {
+    "item": "messenger_crow:crow_skull_mask_helmet",
+    "count": 1
+  }
+}

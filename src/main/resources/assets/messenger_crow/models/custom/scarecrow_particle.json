@@ -1,0 +1,6 @@
+{
+  "parent": "messenger_crow:displaysettings/scarecrow",
+  "textures": {
+    "particle": "messenger_crow:block/scarecrow"
+  }
+}

@@ -1,0 +1,222 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "messenger_crow:item/scroll"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "messenger_crow:scroll_sealed": 1
+      },
+      "model": "messenger_crow:item/scroll_0"
+    },
+    {
+      "predicate": {
+        "messenger_crow:scroll_ribbon": 1
+      },
+      "model": "messenger_crow:item/scroll_1"
+    },
+    {
+      "predicate": {
+        "messenger_crow:scroll_ribbon": 2
+      },
+      "model": "messenger_crow:item/scroll_2"
+    },
+    {
+      "predicate": {
+        "messenger_crow:scroll_ribbon": 3
+      },
+      "model": "messenger_crow:item/scroll_3"
+    },
+    {
+      "predicate": {
+        "messenger_crow:scroll_ribbon": 4
+      },
+      "model": "messenger_crow:item/scroll_4"
+    },
+    {
+      "predicate": {
+        "messenger_crow:scroll_ribbon": 5
+      },
+      "model": "messenger_crow:item/scroll_5"
+    },
+    {
+      "predicate": {
+        "messenger_crow:scroll_ribbon": 6
+      },
+      "model": "messenger_crow:item/scroll_6"
+    },
+    {
+      "predicate": {
+        "messenger_crow:scroll_ribbon": 7
+      },
+      "model": "messenger_crow:item/scroll_7"
+    },
+    {
+      "predicate": {
+        "messenger_crow:scroll_ribbon": 8
+      },
+      "model": "messenger_crow:item/scroll_8"
+    },
+    {
+      "predicate": {
+        "messenger_crow:scroll_ribbon": 9
+      },
+      "model": "messenger_crow:item/scroll_9"
+    },
+    {
+      "predicate": {
+        "messenger_crow:scroll_ribbon": 10
+      },
+      "model": "messenger_crow:item/scroll_10"
+    },
+    {
+      "predicate": {
+        "messenger_crow:scroll_ribbon": 11
+      },
+      "model": "messenger_crow:item/scroll_11"
+    },
+    {
+      "predicate": {
+        "messenger_crow:scroll_ribbon": 12
+      },
+      "model": "messenger_crow:item/scroll_12"
+    },
+    {
+      "predicate": {
+        "messenger_crow:scroll_ribbon": 13
+      },
+      "model": "messenger_crow:item/scroll_13"
+    },
+    {
+      "predicate": {
+        "messenger_crow:scroll_ribbon": 14
+      },
+      "model": "messenger_crow:item/scroll_14"
+    },
+    {
+      "predicate": {
+        "messenger_crow:scroll_ribbon": 15
+      },
+      "model": "messenger_crow:item/scroll_15"
+    },
+    {
+      "predicate": {
+        "messenger_crow:scroll_ribbon": 16
+      },
+      "model": "messenger_crow:item/scroll_16"
+    },
+    {
+      "predicate": {
+        "messenger_crow:scroll_sealed": 1,
+        "messenger_crow:scroll_ribbon": 1
+      },
+      "model": "messenger_crow:item/scroll_17"
+    },
+    {
+      "predicate": {
+        "messenger_crow:scroll_sealed": 1,
+        "messenger_crow:scroll_ribbon": 2
+      },
+      "model": "messenger_crow:item/scroll_18"
+    },
+    {
+      "predicate": {
+        "messenger_crow:scroll_sealed": 1,
+        "messenger_crow:scroll_ribbon": 3
+      },
+      "model": "messenger_crow:item/scroll_19"
+    },
+    {
+      "predicate": {
+        "messenger_crow:scroll_sealed": 1,
+        "messenger_crow:scroll_ribbon": 4
+      },
+      "model": "messenger_crow:item/scroll_20"
+    },
+    {
+      "predicate": {
+        "messenger_crow:scroll_sealed": 1,
+        "messenger_crow:scroll_ribbon": 5
+      },
+      "model": "messenger_crow:item/scroll_21"
+    },
+    {
+      "predicate": {
+        "messenger_crow:scroll_sealed": 1,
+        "messenger_crow:scroll_ribbon": 6
+      },
+      "model": "messenger_crow:item/scroll_22"
+    },
+    {
+      "predicate": {
+        "messenger_crow:scroll_sealed": 1,
+        "messenger_crow:scroll_ribbon": 7
+      },
+      "model": "messenger_crow:item/scroll_23"
+    },
+    {
+      "predicate": {
+        "messenger_crow:scroll_sealed": 1,
+        "messenger_crow:scroll_ribbon": 8
+      },
+      "model": "messenger_crow:item/scroll_24"
+    },
+    {
+      "predicate": {
+        "messenger_crow:scroll_sealed": 1,
+        "messenger_crow:scroll_ribbon": 9
+      },
+      "model": "messenger_crow:item/scroll_25"
+    },
+    {
+      "predicate": {
+        "messenger_crow:scroll_sealed": 1,
+        "messenger_crow:scroll_ribbon": 10
+      },
+      "model": "messenger_crow:item/scroll_26"
+    },
+    {
+      "predicate": {
+        "messenger_crow:scroll_sealed": 1,
+        "messenger_crow:scroll_ribbon": 11
+      },
+      "model": "messenger_crow:item/scroll_27"
+    },
+    {
+      "predicate": {
+        "messenger_crow:scroll_sealed": 1,
+        "messenger_crow:scroll_ribbon": 12
+      },
+      "model": "messenger_crow:item/scroll_28"
+    },
+    {
+      "predicate": {
+        "messenger_crow:scroll_sealed": 1,
+        "messenger_crow:scroll_ribbon": 13
+      },
+      "model": "messenger_crow:item/scroll_29"
+    },
+    {
+      "predicate": {
+        "messenger_crow:scroll_sealed": 1,
+        "messenger_crow:scroll_ribbon": 14
+      },
+      "model": "messenger_crow:item/scroll_30"
+    },
+    {
+      "predicate": {
+        "messenger_crow:scroll_sealed": 1,
+        "messenger_crow:scroll_ribbon": 15
+      },
+      "model": "messenger_crow:item/scroll_31"
+    },
+    {
+      "predicate": {
+        "messenger_crow:scroll_sealed": 1,
+        "messenger_crow:scroll_ribbon": 16
+      },
+      "model": "messenger_crow:item/scroll_32"
+    }
+  ]
+}

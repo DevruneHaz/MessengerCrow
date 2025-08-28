@@ -1,0 +1,249 @@
+{
+  "_fv": 73,
+  "_type": "gui",
+  "definition": {
+    "type": 1,
+    "width": 176,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": "CUSTOM:Scroll"
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 0,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 205,
+          "y": 84,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "black_scroll_overlay.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "BlackCrowOverlay"
+          },
+          "x": 126,
+          "y": 37,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "blue_scroll_overlay.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "BlueCrowOverlay"
+          },
+          "x": 126,
+          "y": 37,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "brown_scroll_overlay.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "BrownCrowOverlay"
+          },
+          "x": 126,
+          "y": 37,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "cyan_scroll_overlay.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "CyanCrowOverlay"
+          },
+          "x": 126,
+          "y": 37,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "gray_scroll_overlay.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "GrayCrowOverlay"
+          },
+          "x": 126,
+          "y": 37,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "green_scroll_overlay.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "GreenCrowOverlay"
+          },
+          "x": 126,
+          "y": 37,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "light_blue_scroll_overlay.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "LightBlueCrowOverlay"
+          },
+          "x": 126,
+          "y": 37,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "light_gray_scroll_overlay.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "LightGrayCrowOverlay"
+          },
+          "x": 126,
+          "y": 37,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "lime_scroll_overlay.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "LimeCrowOverlay"
+          },
+          "x": 126,
+          "y": 37,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "magenta_scroll_overlay.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "MagentaCrowOverlay"
+          },
+          "x": 126,
+          "y": 37,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "orange_scroll_overlay.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "OrangeCrowOverlay"
+          },
+          "x": 126,
+          "y": 37,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "pink_scroll_overlay.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "PinkCrowOverlay"
+          },
+          "x": 126,
+          "y": 37,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "purple_scroll_overlay.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "PurpleCrowOverlay"
+          },
+          "x": 126,
+          "y": 37,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "red_scroll_overlay.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "RedCrowOverlay"
+          },
+          "x": 126,
+          "y": 37,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "white_scroll_overlay.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "WhiteCrowOverlay"
+          },
+          "x": 126,
+          "y": 37,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "yellow_scroll_overlay.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "YellowCrowOverlay"
+          },
+          "x": 126,
+          "y": 37,
+          "locked": false
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 13,
+      "oy": 22,
+      "snapOnGrid": false
+    }
+  }
+}

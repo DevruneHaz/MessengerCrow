@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "messenger_crow:item/gray_scroll_sealed"
+  }
+}

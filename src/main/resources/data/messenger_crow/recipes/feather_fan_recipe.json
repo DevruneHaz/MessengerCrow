@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " a ",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "messenger_crow:crow_feather"
+    }
+  },
+  "result": {
+    "item": "messenger_crow:feather_fan",
+    "count": 1
+  }
+}

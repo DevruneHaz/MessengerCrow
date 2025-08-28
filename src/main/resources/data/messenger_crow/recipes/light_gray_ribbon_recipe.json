@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:light_gray_wool"
+    }
+  ],
+  "result": {
+    "item": "messenger_crow:light_gray_ribbon",
+    "count": 1
+  }
+}

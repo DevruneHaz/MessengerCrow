@@ -1,0 +1,11 @@
+{
+  "parent": "messenger_crow:custom/scroll_shelf",
+  "textures": {
+    "all": "messenger_crow:block/scroll_shelf_empty",
+    "particle": "messenger_crow:block/scroll_shelf_empty",
+    "0": "messenger_crow:block/scroll_shelf_empty",
+    "2": "messenger_crow:block/scroll_shelf_side",
+    "5": "minecraft:block/barrel_bottom"
+  },
+  "render_type": "solid"
+}

@@ -1,0 +1,9 @@
+{
+  "parent": "messenger_crow:custom/bottom_middle_scroll",
+  "textures": {
+    "all": "messenger_crow:block/scroll_shelf_occupied",
+    "particle": "messenger_crow:block/scroll_shelf_occupied",
+    "0": "messenger_crow:block/scroll_shelf_occupied"
+  },
+  "render_type": "cutout"
+}

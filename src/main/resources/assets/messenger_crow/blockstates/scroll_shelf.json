@@ -1,0 +1,445 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "messenger_crow:block/scroll_shelf",
+        "uvlock": true,
+        "y": 0
+      },
+      "when": {
+        "facing": "north"
+      }
+    },
+    
+    {
+      "apply": {
+        "model": "messenger_crow:block/top_left_scroll",
+        "y": 0
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "north"
+          },
+          {
+            "scroll0": "true"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "messenger_crow:block/top_middle_scroll",
+        "y": 0
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "north"
+          },
+          {
+            "scroll1": "true"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "messenger_crow:block/top_right_scroll",
+        "y": 0
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "north"
+          },
+          {
+            "scroll2": "true"
+          }
+        ]
+      }
+    },
+        {
+      "apply": {
+        "model": "messenger_crow:block/bottom_left_scroll",
+        "y": 0
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "north"
+          },
+          {
+            "scroll3": "true"
+          }
+        ]
+      }
+    },
+        {
+      "apply": {
+        "model": "messenger_crow:block/bottom_middle_scroll",
+        "y": 0
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "north"
+          },
+          {
+            "scroll4": "true"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "messenger_crow:block/bottom_right_scroll",
+        "y": 0
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "north"
+          },
+          {
+            "scroll5": "true"
+          }
+        ]
+      }
+    },
+
+
+
+    
+    {
+      "apply": {
+        "model": "messenger_crow:block/scroll_shelf",
+        "uvlock": true,
+        "y": 90
+      },
+      "when": {
+        "facing": "east"
+      }
+    },
+
+    {
+      "apply": {
+        "model": "messenger_crow:block/top_left_scroll",
+        "y": 90
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "east"
+          },
+          {
+            "scroll0": "true"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "messenger_crow:block/top_middle_scroll",
+        "y": 90
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "east"
+          },
+          {
+            "scroll1": "true"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "messenger_crow:block/top_right_scroll",
+        "y": 90
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "east"
+          },
+          {
+            "scroll2": "true"
+          }
+        ]
+      }
+    },
+        {
+      "apply": {
+        "model": "messenger_crow:block/bottom_left_scroll",
+        "y": 90
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "east"
+          },
+          {
+            "scroll3": "true"
+          }
+        ]
+      }
+    },
+        {
+      "apply": {
+        "model": "messenger_crow:block/bottom_middle_scroll",
+        "y": 90
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "east"
+          },
+          {
+            "scroll4": "true"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "messenger_crow:block/bottom_right_scroll",
+        "y": 90
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "east"
+          },
+          {
+            "scroll5": "true"
+          }
+        ]
+      }
+    },
+
+
+
+    
+    {
+      "apply": {
+        "model": "messenger_crow:block/scroll_shelf",
+        "uvlock": true,
+        "y": 180
+      },
+      "when": {
+        "facing": "south"
+      }
+    },
+
+    {
+      "apply": {
+        "model": "messenger_crow:block/top_left_scroll",
+        "y": 180
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "south"
+          },
+          {
+            "scroll0": "true"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "messenger_crow:block/top_middle_scroll",
+        "y": 180
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "south"
+          },
+          {
+            "scroll1": "true"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "messenger_crow:block/top_right_scroll",
+        "y": 180
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "south"
+          },
+          {
+            "scroll2": "true"
+          }
+        ]
+      }
+    },
+        {
+      "apply": {
+        "model": "messenger_crow:block/bottom_left_scroll",
+        "y": 180
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "south"
+          },
+          {
+            "scroll3": "true"
+          }
+        ]
+      }
+    },
+        {
+      "apply": {
+        "model": "messenger_crow:block/bottom_middle_scroll",
+        "y": 180
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "south"
+          },
+          {
+            "scroll4": "true"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "messenger_crow:block/bottom_right_scroll",
+        "y": 180
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "south"
+          },
+          {
+            "scroll5": "true"
+          }
+        ]
+      }
+    },
+
+
+
+    
+    {
+      "apply": {
+        "model": "messenger_crow:block/scroll_shelf",
+        "uvlock": true,
+        "y": 270
+      },
+      "when": {
+        "facing": "west"
+      }
+    },
+
+{
+      "apply": {
+        "model": "messenger_crow:block/top_left_scroll",
+        "y": 270
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "west"
+          },
+          {
+            "scroll0": "true"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "messenger_crow:block/top_middle_scroll",
+        "y": 270
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "west"
+          },
+          {
+            "scroll1": "true"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "messenger_crow:block/top_right_scroll",
+        "y": 270
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "west"
+          },
+          {
+            "scroll2": "true"
+          }
+        ]
+      }
+    },
+        {
+      "apply": {
+        "model": "messenger_crow:block/bottom_left_scroll",
+        "y": 270
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "west"
+          },
+          {
+            "scroll3": "true"
+          }
+        ]
+      }
+    },
+        {
+      "apply": {
+        "model": "messenger_crow:block/bottom_middle_scroll",
+        "y": 270
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "west"
+          },
+          {
+            "scroll4": "true"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "messenger_crow:block/bottom_right_scroll",
+        "y": 270
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "west"
+          },
+          {
+            "scroll5": "true"
+          }
+        ]
+      }
+    }
+    
+  ]
+}

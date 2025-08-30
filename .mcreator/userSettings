@@ -5,12 +5,7 @@
   "projectBrowserSplitPos": 0,
   "projectBrowserState": {
     "expandedPaths": [
-      "[, Messenger Crow]",
-      "[, Messenger Crow, Source (Gradle)]",
-      "[, Messenger Crow, Source (Gradle), D:\\MCreatorWorkspaces\\messenger_crow\\src\\main\\java\\net]",
-      "[, Messenger Crow, Source (Gradle), D:\\MCreatorWorkspaces\\messenger_crow\\src\\main\\java\\net, D:\\MCreatorWorkspaces\\messenger_crow\\src\\main\\java\\net\\mcreator]",
-      "[, Messenger Crow, Source (Gradle), D:\\MCreatorWorkspaces\\messenger_crow\\src\\main\\java\\net, D:\\MCreatorWorkspaces\\messenger_crow\\src\\main\\java\\net\\mcreator, D:\\MCreatorWorkspaces\\messenger_crow\\src\\main\\java\\net\\mcreator\\messenger_crow]",
-      "[, Messenger Crow, Source (Gradle), D:\\MCreatorWorkspaces\\messenger_crow\\src\\main\\java\\net, D:\\MCreatorWorkspaces\\messenger_crow\\src\\main\\java\\net\\mcreator, D:\\MCreatorWorkspaces\\messenger_crow\\src\\main\\java\\net\\mcreator\\messenger_crow, D:\\MCreatorWorkspaces\\messenger_crow\\src\\main\\java\\net\\mcreator\\messenger_crow\\procedures]"
+      "[, Messenger Crow]"
     ]
   }
 }

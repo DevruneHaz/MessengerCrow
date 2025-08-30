@@ -54,6 +54,7 @@
   "gui.messenger_crow.green_scroll_lectern_gui.Line2": "",
   "item.messenger_crow.crow_spawn_egg": "Crow Spawn Egg",
   "entity.messenger_crows.crow": "Crow",
+  "block.messenger_crow.scroll_shelf": "Scroll Shelf",
   "gui.messenger_crow.blue_scroll_lectern_gui.Username": "Target Username",
   "gui.messenger_crow.pink_scroll_lectern_gui.Line2": "",
   "gui.messenger_crow.pink_scroll_lectern_gui.Line3": "",

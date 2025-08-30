@@ -1,0 +1,12 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "scroll_shelf_empty",
+        "2": "scroll_shelf_side",
+        "5": "minecraft:barrel_bottom"
+      },
+      "name": "default"
+    }
+  }
+}

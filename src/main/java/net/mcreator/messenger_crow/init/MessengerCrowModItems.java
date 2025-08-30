@@ -12,7 +12,9 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.api.distmarker.Dist;
 
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.client.renderer.item.ItemProperties;
 
@@ -69,9 +71,14 @@ public class MessengerCrowModItems {
 	public static final RegistryObject<Item> SCROLL_LECTERN = REGISTRY.register(MessengerCrowModBlocks.SCROLL_LECTERN.getId().getPath(), () -> new ScrollLecternDisplayItem(MessengerCrowModBlocks.SCROLL_LECTERN.get(), new Item.Properties()));
 	public static final RegistryObject<Item> PHANTOM_CROW_FEATHER = REGISTRY.register("phantom_crow_feather", () -> new PhantomCrowFeatherItem());
 	public static final RegistryObject<Item> CROW_SKULL_MASK_HELMET = REGISTRY.register("crow_skull_mask_helmet", () -> new CrowSkullMaskItem.Helmet());
+	public static final RegistryObject<Item> SCROLL_SHELF = block(MessengerCrowModBlocks.SCROLL_SHELF);
 
 	// Start of user code block custom items
 	// End of user code block custom items
+	private static RegistryObject<Item> block(RegistryObject<Block> block) {
+		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));
+	}
+
 	@SubscribeEvent
 	public static void clientLoad(FMLClientSetupEvent event) {
 		event.enqueueWork(() -> {

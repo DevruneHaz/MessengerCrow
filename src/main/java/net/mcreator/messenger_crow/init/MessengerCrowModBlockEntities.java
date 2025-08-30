@@ -11,6 +11,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.Block;
 
+import net.mcreator.messenger_crow.block.entity.ScrollShelfBlockEntity;
 import net.mcreator.messenger_crow.block.entity.ScrollLecternTileEntity;
 import net.mcreator.messenger_crow.block.entity.ScarecrowTileEntity;
 import net.mcreator.messenger_crow.MessengerCrowMod;
@@ -20,6 +21,7 @@ public class MessengerCrowModBlockEntities {
 	public static final RegistryObject<BlockEntityType<ScarecrowTileEntity>> SCARECROW = REGISTRY.register("scarecrow", () -> BlockEntityType.Builder.of(ScarecrowTileEntity::new, MessengerCrowModBlocks.SCARECROW.get()).build(null));
 	public static final RegistryObject<BlockEntityType<ScrollLecternTileEntity>> SCROLL_LECTERN = REGISTRY.register("scroll_lectern",
 			() -> BlockEntityType.Builder.of(ScrollLecternTileEntity::new, MessengerCrowModBlocks.SCROLL_LECTERN.get()).build(null));
+	public static final RegistryObject<BlockEntityType<?>> SCROLL_SHELF = register("scroll_shelf", MessengerCrowModBlocks.SCROLL_SHELF, ScrollShelfBlockEntity::new);
 
 	// Start of user code block custom block entities
 	// End of user code block custom block entities

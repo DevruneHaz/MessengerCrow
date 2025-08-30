@@ -31,6 +31,8 @@ public class MessengerCrowModTabs {
 			tabData.accept(MessengerCrowModItems.FEATHER_FAN.get());
 		} else if (tabData.getTabKey() == CreativeModeTabs.COMBAT) {
 			tabData.accept(MessengerCrowModItems.CROW_SKULL_MASK_HELMET.get());
+		} else if (tabData.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+			tabData.accept(MessengerCrowModBlocks.SCROLL_SHELF.get().asItem());
 		}
 	}
 }

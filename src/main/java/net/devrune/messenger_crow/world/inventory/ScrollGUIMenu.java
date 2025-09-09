@@ -294,7 +294,7 @@ public class ScrollGUIMenu extends AbstractContainerMenu implements Supplier<Map
 			if (!world.hasChunkAt(new BlockPos(x, y, z)))
 				return;
 			if (mode == 0) {
-				ScrollGUICloseProcedure.execute(entity);
+				entity.closeContainer();
 			}
 		}
 

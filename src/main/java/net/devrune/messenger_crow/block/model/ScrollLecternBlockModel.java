@@ -9,115 +9,36 @@ import net.devrune.messenger_crow.block.entity.ScrollLecternTileEntity;
 public class ScrollLecternBlockModel extends GeoModel<ScrollLecternTileEntity> {
 	@Override
 	public ResourceLocation getAnimationResource(ScrollLecternTileEntity animatable) {
-		final int blockstate = animatable.blockstateNew;
-		if (blockstate == 1)
-			return new ResourceLocation("messenger_crow", "animations/scroll_lectern.animation.json");
-		if (blockstate == 2)
-			return new ResourceLocation("messenger_crow", "animations/scroll_lectern.animation.json");
-		if (blockstate == 3)
-			return new ResourceLocation("messenger_crow", "animations/scroll_lectern.animation.json");
-		if (blockstate == 4)
-			return new ResourceLocation("messenger_crow", "animations/scroll_lectern.animation.json");
-		if (blockstate == 5)
-			return new ResourceLocation("messenger_crow", "animations/scroll_lectern.animation.json");
-		if (blockstate == 6)
-			return new ResourceLocation("messenger_crow", "animations/scroll_lectern.animation.json");
-		if (blockstate == 7)
-			return new ResourceLocation("messenger_crow", "animations/scroll_lectern.animation.json");
-		if (blockstate == 8)
-			return new ResourceLocation("messenger_crow", "animations/scroll_lectern.animation.json");
-		if (blockstate == 9)
-			return new ResourceLocation("messenger_crow", "animations/scroll_lectern.animation.json");
-		if (blockstate == 10)
-			return new ResourceLocation("messenger_crow", "animations/scroll_lectern.animation.json");
-		if (blockstate == 11)
-			return new ResourceLocation("messenger_crow", "animations/scroll_lectern.animation.json");
-		if (blockstate == 12)
-			return new ResourceLocation("messenger_crow", "animations/scroll_lectern.animation.json");
-		if (blockstate == 13)
-			return new ResourceLocation("messenger_crow", "animations/scroll_lectern.animation.json");
-		if (blockstate == 14)
-			return new ResourceLocation("messenger_crow", "animations/scroll_lectern.animation.json");
-		if (blockstate == 15)
-			return new ResourceLocation("messenger_crow", "animations/scroll_lectern.animation.json");
-		if (blockstate == 16)
-			return new ResourceLocation("messenger_crow", "animations/scroll_lectern.animation.json");
 		return new ResourceLocation("messenger_crow", "animations/scroll_lectern.animation.json");
 	}
 
 	@Override
 	public ResourceLocation getModelResource(ScrollLecternTileEntity animatable) {
-		final int blockstate = animatable.blockstateNew;
-		if (blockstate == 1)
-			return new ResourceLocation("messenger_crow", "geo/scroll_lectern.geo.json");
-		if (blockstate == 2)
-			return new ResourceLocation("messenger_crow", "geo/scroll_lectern.geo.json");
-		if (blockstate == 3)
-			return new ResourceLocation("messenger_crow", "geo/scroll_lectern.geo.json");
-		if (blockstate == 4)
-			return new ResourceLocation("messenger_crow", "geo/scroll_lectern.geo.json");
-		if (blockstate == 5)
-			return new ResourceLocation("messenger_crow", "geo/scroll_lectern.geo.json");
-		if (blockstate == 6)
-			return new ResourceLocation("messenger_crow", "geo/scroll_lectern.geo.json");
-		if (blockstate == 7)
-			return new ResourceLocation("messenger_crow", "geo/scroll_lectern.geo.json");
-		if (blockstate == 8)
-			return new ResourceLocation("messenger_crow", "geo/scroll_lectern.geo.json");
-		if (blockstate == 9)
-			return new ResourceLocation("messenger_crow", "geo/scroll_lectern.geo.json");
-		if (blockstate == 10)
-			return new ResourceLocation("messenger_crow", "geo/scroll_lectern.geo.json");
-		if (blockstate == 11)
-			return new ResourceLocation("messenger_crow", "geo/scroll_lectern.geo.json");
-		if (blockstate == 12)
-			return new ResourceLocation("messenger_crow", "geo/scroll_lectern.geo.json");
-		if (blockstate == 13)
-			return new ResourceLocation("messenger_crow", "geo/scroll_lectern.geo.json");
-		if (blockstate == 14)
-			return new ResourceLocation("messenger_crow", "geo/scroll_lectern.geo.json");
-		if (blockstate == 15)
-			return new ResourceLocation("messenger_crow", "geo/scroll_lectern.geo.json");
-		if (blockstate == 16)
-			return new ResourceLocation("messenger_crow", "geo/scroll_lectern.geo.json");
 		return new ResourceLocation("messenger_crow", "geo/scroll_lectern.geo.json");
 	}
 
 	@Override
 	public ResourceLocation getTextureResource(ScrollLecternTileEntity animatable) {
 		final int blockstate = animatable.blockstateNew;
-		if (blockstate == 1)
-			return new ResourceLocation("messenger_crow", "textures/block/black_lectern_scroll.png");
-		if (blockstate == 2)
-			return new ResourceLocation("messenger_crow", "textures/block/blue_lectern_scroll.png");
-		if (blockstate == 3)
-			return new ResourceLocation("messenger_crow", "textures/block/brown_lectern_scroll.png");
-		if (blockstate == 4)
-			return new ResourceLocation("messenger_crow", "textures/block/cyan_lectern_scroll.png");
-		if (blockstate == 5)
-			return new ResourceLocation("messenger_crow", "textures/block/gray_lectern_scroll.png");
-		if (blockstate == 6)
-			return new ResourceLocation("messenger_crow", "textures/block/green_lectern_scroll.png");
-		if (blockstate == 7)
-			return new ResourceLocation("messenger_crow", "textures/block/light_blue_lectern_scroll.png");
-		if (blockstate == 8)
-			return new ResourceLocation("messenger_crow", "textures/block/light_gray_lectern_scroll.png");
-		if (blockstate == 9)
-			return new ResourceLocation("messenger_crow", "textures/block/lime_lectern_scroll.png");
-		if (blockstate == 10)
-			return new ResourceLocation("messenger_crow", "textures/block/magenta_lectern_scroll.png");
-		if (blockstate == 11)
-			return new ResourceLocation("messenger_crow", "textures/block/orange_lectern_scroll.png");
-		if (blockstate == 12)
-			return new ResourceLocation("messenger_crow", "textures/block/pink_lectern_scroll.png");
-		if (blockstate == 13)
-			return new ResourceLocation("messenger_crow", "textures/block/purple_lectern_scroll.png");
-		if (blockstate == 14)
-			return new ResourceLocation("messenger_crow", "textures/block/red_lectern_scroll.png");
-		if (blockstate == 15)
-			return new ResourceLocation("messenger_crow", "textures/block/white_lectern_scroll.png");
-		if (blockstate == 16)
-			return new ResourceLocation("messenger_crow", "textures/block/yellow_lectern_scroll.png");
-		return new ResourceLocation("messenger_crow", "textures/block/lectern_scroll.png");
+		String textureLocation = switch (blockstate) {
+			case 1 -> "textures/block/black_lectern_scroll.png";
+			case 2 -> "textures/block/blue_lectern_scroll.png";
+			case 3 -> "textures/block/brown_lectern_scroll.png";
+			case 4 -> "textures/block/cyan_lectern_scroll.png";
+			case 5 -> "textures/block/gray_lectern_scroll.png";
+			case 6 -> "textures/block/green_lectern_scroll.png";
+			case 7 -> "textures/block/light_blue_lectern_scroll.png";
+			case 8 -> "textures/block/light_gray_lectern_scroll.png";
+			case 9 -> "textures/block/lime_lectern_scroll.png";
+			case 10 -> "textures/block/magenta_lectern_scroll.png";
+			case 11 -> "textures/block/orange_lectern_scroll.png";
+			case 12 -> "textures/block/pink_lectern_scroll.png";
+			case 13 -> "textures/block/purple_lectern_scroll.png";
+			case 14 -> "textures/block/red_lectern_scroll.png";
+			case 15 -> "textures/block/white_lectern_scroll.png";
+			case 16 -> "textures/block/yellow_lectern_scroll.png";
+			default -> "textures/block/lectern_scroll.png";
+		};
+		return new ResourceLocation("messenger_crow", textureLocation);
 	}
 }

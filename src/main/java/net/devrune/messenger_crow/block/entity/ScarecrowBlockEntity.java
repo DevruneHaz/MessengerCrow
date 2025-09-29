@@ -207,6 +207,7 @@ public class ScarecrowBlockEntity extends RandomizableContainerBlockEntity imple
 
 
 	@Mod.EventBusSubscriber(modid = MessengerCrowMod.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
+	@SuppressWarnings("unused")
 	public static class ClientEvents {
 		@OnlyIn(Dist.CLIENT)
 		@SubscribeEvent

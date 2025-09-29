@@ -20,7 +20,14 @@ import net.devrune.messenger_crow.MessengerCrowMod;
 public class MessengerCrowModEntities {
 	public static final DeferredRegister<EntityType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, MessengerCrowMod.MODID);
 	public static final RegistryObject<EntityType<CrowEntity>> CROW = register("crow",
-			EntityType.Builder.<CrowEntity>of(CrowEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CrowEntity::new).fireImmune().sized(0.5f, 0.5f));
+			EntityType.Builder.<CrowEntity>of(CrowEntity::new, MobCategory.AMBIENT)
+					.setShouldReceiveVelocityUpdates(true)
+					.setTrackingRange(64)
+					.setUpdateInterval(3)
+					.setCustomClientFactory(CrowEntity::new)
+					.fireImmune()
+					.sized(0.5f, 0.5f)
+	);
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> entityTypeBuilder.build(registryname));

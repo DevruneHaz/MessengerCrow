@@ -1,7 +1,6 @@
 package net.devrune.messenger_crow.block.entity;
 
 import net.devrune.messenger_crow.MessengerCrowMod;
-import net.devrune.messenger_crow.block.renderer.ScarecrowTileRenderer;
 import net.devrune.messenger_crow.block.renderer.ScrollLecternTileRenderer;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
@@ -210,6 +209,7 @@ public class ScrollLecternBlockEntity extends RandomizableContainerBlockEntity i
 
 
 	@Mod.EventBusSubscriber(modid = MessengerCrowMod.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
+	@SuppressWarnings("unused")
 	public static class ClientEvents {
 		@OnlyIn(Dist.CLIENT)
 		@SubscribeEvent

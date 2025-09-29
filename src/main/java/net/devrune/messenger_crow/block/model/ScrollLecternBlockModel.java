@@ -4,21 +4,21 @@ import software.bernie.geckolib.model.GeoModel;
 
 import net.minecraft.resources.ResourceLocation;
 
-import net.devrune.messenger_crow.block.entity.ScrollLecternTileEntity;
+import net.devrune.messenger_crow.block.entity.ScrollLecternBlockEntity;
 
-public class ScrollLecternBlockModel extends GeoModel<ScrollLecternTileEntity> {
+public class ScrollLecternBlockModel extends GeoModel<ScrollLecternBlockEntity> {
 	@Override
-	public ResourceLocation getAnimationResource(ScrollLecternTileEntity animatable) {
+	public ResourceLocation getAnimationResource(ScrollLecternBlockEntity animatable) {
 		return new ResourceLocation("messenger_crow", "animations/scroll_lectern.animation.json");
 	}
 
 	@Override
-	public ResourceLocation getModelResource(ScrollLecternTileEntity animatable) {
+	public ResourceLocation getModelResource(ScrollLecternBlockEntity animatable) {
 		return new ResourceLocation("messenger_crow", "geo/scroll_lectern.geo.json");
 	}
 
 	@Override
-	public ResourceLocation getTextureResource(ScrollLecternTileEntity animatable) {
+	public ResourceLocation getTextureResource(ScrollLecternBlockEntity animatable) {
 		final int blockstate = animatable.blockstateNew;
 		String textureLocation = switch (blockstate) {
 			case 1 -> "textures/block/black_lectern_scroll.png";

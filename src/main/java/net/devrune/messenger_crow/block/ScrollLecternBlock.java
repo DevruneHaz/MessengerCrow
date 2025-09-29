@@ -54,7 +54,7 @@ import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
 import net.devrune.messenger_crow.init.MessengerCrowModBlockEntities;
-import net.devrune.messenger_crow.block.entity.ScrollLecternTileEntity;
+import net.devrune.messenger_crow.block.entity.ScrollLecternBlockEntity;
 import net.minecraftforge.network.NetworkHooks;
 import org.jetbrains.annotations.NotNull;
 
@@ -440,7 +440,7 @@ public class ScrollLecternBlock extends BaseEntityBlock implements EntityBlock {
 	public void onRemove(BlockState state, @NotNull Level world, @NotNull BlockPos pos, BlockState newState, boolean isMoving) {
 		if (state.getBlock() != newState.getBlock()) {
 			BlockEntity blockEntity = world.getBlockEntity(pos);
-			if (blockEntity instanceof ScrollLecternTileEntity be) {
+			if (blockEntity instanceof ScrollLecternBlockEntity be) {
 				Containers.dropContents(world, pos, be);
 				world.updateNeighbourForOutputSignal(pos, this);
 			}
@@ -456,7 +456,7 @@ public class ScrollLecternBlock extends BaseEntityBlock implements EntityBlock {
 	@Override
 	public int getAnalogOutputSignal(@NotNull BlockState blockState, Level world, BlockPos pos) {
 		BlockEntity tileentity = world.getBlockEntity(pos);
-		if (tileentity instanceof ScrollLecternTileEntity be)
+		if (tileentity instanceof ScrollLecternBlockEntity be)
 			return AbstractContainerMenu.getRedstoneSignalFromContainer(be);
 		else
 			return 0;

@@ -1,4 +1,4 @@
-package net.devrune.messenger_crow.block.listener;
+package net.devrune.messenger_crow.block.event;
 
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -11,8 +11,9 @@ import net.devrune.messenger_crow.block.renderer.ScrollLecternTileRenderer;
 import net.devrune.messenger_crow.block.renderer.ScarecrowTileRenderer;
 import net.devrune.messenger_crow.MessengerCrowMod;
 
+//TODO I'd like to move this into the tile renderer classes themselves, with an event subscription in a dedicated client event class
 @Mod.EventBusSubscriber(modid = MessengerCrowMod.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
-public class ClientListener {
+public class RegisterRenderersListener {
 	@OnlyIn(Dist.CLIENT)
 	@SubscribeEvent
 	public static void registerRenderers(EntityRenderersEvent.RegisterRenderers event) {

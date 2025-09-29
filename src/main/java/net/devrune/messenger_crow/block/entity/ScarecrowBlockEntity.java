@@ -38,14 +38,14 @@ import javax.annotation.Nullable;
 
 import java.util.stream.IntStream;
 
-public class ScarecrowTileEntity extends RandomizableContainerBlockEntity implements GeoBlockEntity, WorldlyContainer {
+public class ScarecrowBlockEntity extends RandomizableContainerBlockEntity implements GeoBlockEntity, WorldlyContainer {
 	private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
-	private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(9, ItemStack.EMPTY);
+	private NonNullList<ItemStack> stacks = NonNullList.withSize(9, ItemStack.EMPTY);
 	private final LazyOptional<? extends IItemHandler>[] handlers = SidedInvWrapper.create(this, Direction.values());
 	public int blockstateNew = this.getBlockState().getValue(ScarecrowBlock.BLOCKSTATE);
 	private int blockstateOld = this.getBlockState().getValue(ScarecrowBlock.BLOCKSTATE);
 
-	public ScarecrowTileEntity(BlockPos pos, BlockState state) {
+	public ScarecrowBlockEntity(BlockPos pos, BlockState state) {
 		super(MessengerCrowModBlockEntities.SCARECROW.get(), pos, state);
 	}
 
@@ -86,8 +86,8 @@ public class ScarecrowTileEntity extends RandomizableContainerBlockEntity implem
 
 	@Override
 	public void registerControllers(AnimatableManager.ControllerRegistrar data) {
-		data.add(new AnimationController<ScarecrowTileEntity>(this, "controller", 0, this::predicate));
-		data.add(new AnimationController<ScarecrowTileEntity>(this, "procedurecontroller", 0, this::procedurePredicate));
+		data.add(new AnimationController<ScarecrowBlockEntity>(this, "controller", 0, this::predicate));
+		data.add(new AnimationController<ScarecrowBlockEntity>(this, "procedurecontroller", 0, this::procedurePredicate));
 	}
 
 	@Override

@@ -7,15 +7,15 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.MultiBufferSource;
 
 import net.devrune.messenger_crow.block.model.ScarecrowBlockModel;
-import net.devrune.messenger_crow.block.entity.ScarecrowTileEntity;
+import net.devrune.messenger_crow.block.entity.ScarecrowBlockEntity;
 
-public class ScarecrowTileRenderer extends GeoBlockRenderer<ScarecrowTileEntity> {
+public class ScarecrowTileRenderer extends GeoBlockRenderer<ScarecrowBlockEntity> {
 	public ScarecrowTileRenderer() {
 		super(new ScarecrowBlockModel());
 	}
 
 	@Override
-	public RenderType getRenderType(ScarecrowTileEntity animatable, ResourceLocation texture, MultiBufferSource bufferSource, float partialTick) {
+	public RenderType getRenderType(ScarecrowBlockEntity animatable, ResourceLocation texture, MultiBufferSource bufferSource, float partialTick) {
 		return RenderType.entityTranslucent(getTextureLocation(animatable));
 	}
 }

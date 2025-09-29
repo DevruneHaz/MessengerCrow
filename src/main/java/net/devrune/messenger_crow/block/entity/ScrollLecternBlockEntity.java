@@ -38,14 +38,14 @@ import javax.annotation.Nullable;
 
 import java.util.stream.IntStream;
 
-public class ScrollLecternTileEntity extends RandomizableContainerBlockEntity implements GeoBlockEntity, WorldlyContainer {
+public class ScrollLecternBlockEntity extends RandomizableContainerBlockEntity implements GeoBlockEntity, WorldlyContainer {
 	private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 	private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(1, ItemStack.EMPTY);
 	private final LazyOptional<? extends IItemHandler>[] handlers = SidedInvWrapper.create(this, Direction.values());
 	public int blockstateNew = this.getBlockState().getValue(ScrollLecternBlock.BLOCKSTATE);
 	private int blockstateOld = this.getBlockState().getValue(ScrollLecternBlock.BLOCKSTATE);
 
-	public ScrollLecternTileEntity(BlockPos pos, BlockState state) {
+	public ScrollLecternBlockEntity(BlockPos pos, BlockState state) {
 		super(MessengerCrowModBlockEntities.SCROLL_LECTERN.get(), pos, state);
 	}
 
@@ -86,8 +86,8 @@ public class ScrollLecternTileEntity extends RandomizableContainerBlockEntity im
 
 	@Override
 	public void registerControllers(AnimatableManager.ControllerRegistrar data) {
-		data.add(new AnimationController<ScrollLecternTileEntity>(this, "controller", 0, this::predicate));
-		data.add(new AnimationController<ScrollLecternTileEntity>(this, "procedurecontroller", 0, this::procedurePredicate));
+		data.add(new AnimationController<ScrollLecternBlockEntity>(this, "controller", 0, this::predicate));
+		data.add(new AnimationController<ScrollLecternBlockEntity>(this, "procedurecontroller", 0, this::procedurePredicate));
 	}
 
 	@Override

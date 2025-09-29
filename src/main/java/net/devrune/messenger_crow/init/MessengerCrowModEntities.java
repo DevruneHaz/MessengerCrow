@@ -1,7 +1,3 @@
-
-/*
- *    MCreator note: This file will be REGENERATED on each build.
- */
 package net.devrune.messenger_crow.init;
 
 import net.minecraftforge.registries.RegistryObject;
@@ -20,20 +16,19 @@ import net.devrune.messenger_crow.entity.CrowEntity;
 import net.devrune.messenger_crow.MessengerCrowMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
+@SuppressWarnings("unused")
 public class MessengerCrowModEntities {
 	public static final DeferredRegister<EntityType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, MessengerCrowMod.MODID);
 	public static final RegistryObject<EntityType<CrowEntity>> CROW = register("crow",
 			EntityType.Builder.<CrowEntity>of(CrowEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CrowEntity::new).fireImmune().sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
-		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
+		return REGISTRY.register(registryname, () -> entityTypeBuilder.build(registryname));
 	}
 
 	@SubscribeEvent
 	public static void init(FMLCommonSetupEvent event) {
-		event.enqueueWork(() -> {
-			CrowEntity.init();
-		});
+		event.enqueueWork(CrowEntity::init);
 	}
 
 	@SubscribeEvent

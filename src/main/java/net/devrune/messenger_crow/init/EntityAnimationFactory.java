@@ -7,6 +7,7 @@ import net.minecraftforge.event.entity.living.LivingEvent;
 import net.devrune.messenger_crow.entity.CrowEntity;
 
 @Mod.EventBusSubscriber
+@SuppressWarnings("unused")
 public class EntityAnimationFactory {
 	@SubscribeEvent
 	public static void onEntityTick(LivingEvent.LivingTickEvent event) {

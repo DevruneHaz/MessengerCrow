@@ -1,7 +1,3 @@
-
-/*
- *    MCreator note: This file will be REGENERATED on each build.
- */
 package net.devrune.messenger_crow.init;
 
 import net.minecraftforge.registries.RegistryObject;

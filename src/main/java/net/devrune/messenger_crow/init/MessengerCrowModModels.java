@@ -1,7 +1,3 @@
-
-/*
- *    MCreator note: This file will be REGENERATED on each build.
- */
 package net.devrune.messenger_crow.init;
 
 import net.minecraftforge.fml.common.Mod;
@@ -12,6 +8,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.devrune.messenger_crow.client.model.Modelcrow_skull_mask;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = {Dist.CLIENT})
+@SuppressWarnings("unused")
 public class MessengerCrowModModels {
 	@SubscribeEvent
 	public static void registerLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event) {

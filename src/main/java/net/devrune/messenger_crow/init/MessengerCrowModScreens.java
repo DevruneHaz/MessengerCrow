@@ -1,7 +1,3 @@
-
-/*
- *	MCreator note: This file will be REGENERATED on each build.
- */
 package net.devrune.messenger_crow.init;
 
 import net.devrune.messenger_crow.world.inventory.ScrollLecternGUIMenu;
@@ -17,6 +13,7 @@ import net.devrune.messenger_crow.client.gui.ScrollGUIScreen;
 import net.devrune.messenger_crow.client.gui.CrowInventoryScreen;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+@SuppressWarnings("unused")
 public class MessengerCrowModScreens {
 	@SubscribeEvent
 	public static void clientLoad(FMLClientSetupEvent event) {

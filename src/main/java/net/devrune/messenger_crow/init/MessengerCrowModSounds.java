@@ -1,7 +1,3 @@
-
-/*
- *    MCreator note: This file will be REGENERATED on each build.
- */
 package net.devrune.messenger_crow.init;
 
 import net.minecraftforge.registries.RegistryObject;
@@ -13,6 +9,7 @@ import net.minecraft.resources.ResourceLocation;
 
 import net.devrune.messenger_crow.MessengerCrowMod;
 
+@SuppressWarnings("unused")
 public class MessengerCrowModSounds {
 	public static final DeferredRegister<SoundEvent> REGISTRY = DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, MessengerCrowMod.MODID);
 	public static final RegistryObject<SoundEvent> CROW_AMBIENT = REGISTRY.register("crow_ambient", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("messenger_crow", "crow_ambient")));

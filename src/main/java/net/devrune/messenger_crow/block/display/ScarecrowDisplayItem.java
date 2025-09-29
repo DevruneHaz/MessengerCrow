@@ -1,6 +1,6 @@
 package net.devrune.messenger_crow.block.display;
 
-import net.devrune.messenger_crow.block.display.util.DisplayItemClientExtensions;
+import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import software.bernie.geckolib.util.GeckoLibUtil;
 import software.bernie.geckolib.core.object.PlayState;
 import software.bernie.geckolib.core.animation.AnimationController;
@@ -12,14 +12,12 @@ import net.minecraftforge.client.extensions.common.IClientItemExtensions;
 
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.item.BlockItem;
-import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 
 import net.devrune.messenger_crow.block.renderer.ScarecrowDisplayItemRenderer;
 
 import java.util.function.Consumer;
 
 
-//TODO very similar to ScrollLecternDisplayItem. Consider introducing a common parent class.
 public class ScarecrowDisplayItem extends BlockItem implements GeoItem {
 	private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 
@@ -44,4 +42,19 @@ public class ScarecrowDisplayItem extends BlockItem implements GeoItem {
 	public AnimatableInstanceCache getAnimatableInstanceCache() {
 		return this.cache;
 	}
+
+
+	public static class DisplayItemClientExtensions implements IClientItemExtensions {
+		private final BlockEntityWithoutLevelRenderer renderer;
+
+		public DisplayItemClientExtensions(BlockEntityWithoutLevelRenderer renderer) {
+			this.renderer = renderer;
+		}
+
+		@Override
+		public BlockEntityWithoutLevelRenderer getCustomRenderer() {
+			return renderer;
+		}
+	}
+
 }

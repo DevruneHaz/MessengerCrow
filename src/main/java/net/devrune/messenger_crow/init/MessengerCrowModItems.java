@@ -22,7 +22,6 @@ import net.devrune.messenger_crow.item.PhantomCrowFeatherItem;
 import net.devrune.messenger_crow.item.FeatherFanItem;
 import net.devrune.messenger_crow.item.CrowSkullMaskItem;
 import net.devrune.messenger_crow.item.CrowFeatherItem;
-import net.devrune.messenger_crow.block.display.ScrollLecternDisplayItem;
 import net.devrune.messenger_crow.block.display.ScarecrowDisplayItem;
 import net.devrune.messenger_crow.MessengerCrowMod;
 
@@ -59,7 +58,6 @@ public class MessengerCrowModItems {
 	public static final RegistryObject<Item> RED_RIBBON = registerWithTab(REGISTRY.register("red_ribbon", defaultItem()));
 	public static final RegistryObject<Item> WHITE_RIBBON = registerWithTab(REGISTRY.register("white_ribbon", defaultItem()));
 	public static final RegistryObject<Item> YELLOW_RIBBON = registerWithTab(REGISTRY.register("yellow_ribbon", defaultItem()));
-	public static final RegistryObject<Item> SCROLL_LECTERN = REGISTRY.register(MessengerCrowModBlocks.SCROLL_LECTERN.getId().getPath(), () -> new ScrollLecternDisplayItem(MessengerCrowModBlocks.SCROLL_LECTERN.get(), new Item.Properties()));
 	public static final RegistryObject<Item> PHANTOM_CROW_FEATHER = registerWithTab(REGISTRY.register("phantom_crow_feather", () -> new PhantomCrowFeatherItem()));
 	public static final RegistryObject<Item> CROW_SKULL_MASK_HELMET = registerWithTab(REGISTRY.register("crow_skull_mask_helmet", () -> new CrowSkullMaskItem.Helmet()));
 

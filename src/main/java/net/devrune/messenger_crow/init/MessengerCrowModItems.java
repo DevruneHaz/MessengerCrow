@@ -140,7 +140,17 @@ public class MessengerCrowModItems {
 				colourString = "§f";
 				colourValue = 15;
 			}
+			case "yellow" -> {
+				colourString = "§e";
+				colourValue = 16;
+			}
+            default -> {}
+        }
+		
+		
+		if (colourString != null) {
+			itemstack.getOrCreateTag().putString("lorecolor", colourString);
 		}
-		return 0;
+		return colourValue;
 	}
 }

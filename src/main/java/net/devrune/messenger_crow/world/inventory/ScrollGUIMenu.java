@@ -24,7 +24,6 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
-import net.devrune.messenger_crow.procedures.ScrollGUICloseProcedure;
 import net.devrune.messenger_crow.init.MessengerCrowModMenus;
 import net.devrune.messenger_crow.MessengerCrowMod;
 

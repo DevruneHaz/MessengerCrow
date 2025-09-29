@@ -5,17 +5,15 @@ import net.devrune.messenger_crow.MessengerCrowMod;
 import net.devrune.messenger_crow.init.MessengerCrowModEntities;
 import net.devrune.messenger_crow.init.MessengerCrowModParticleTypes;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.multiplayer.PlayerInfo;
 import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.GameType;
 import net.minecraft.world.level.LevelAccessor;
-import org.checkerframework.checker.units.qual.s;
 
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraft.world.phys.shapes.Shapes;
@@ -47,6 +45,7 @@ import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
 import net.devrune.messenger_crow.init.MessengerCrowModBlockEntities;
+import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.Nullable;
 
@@ -60,47 +59,42 @@ public class ScarecrowBlock extends BaseEntityBlock implements EntityBlock {
 
 	public ScarecrowBlock() {
 		super(BlockBehaviour.Properties.of()
-
-				.sound(SoundType.WOOD).strength(2f).lightLevel(s -> (new Object() {
-					public int getLightLevel() {
-						if (s.getValue(BLOCKSTATE) == 1)
-							return 6;
-						return 0;
-					}
-				}.getLightLevel())).noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
+				.sound(SoundType.WOOD).strength(2f).lightLevel(s -> s.getValue(BLOCKSTATE) == 1 ? 6 : 0)
+				.noOcclusion()
+				.isRedstoneConductor((bs, br, bp) -> false));
 		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
 	}
 
 	@Override
-	public RenderShape getRenderShape(BlockState state) {
+	public @NotNull RenderShape getRenderShape(@NotNull BlockState state) {
 		return RenderShape.ENTITYBLOCK_ANIMATED;
 	}
 
 	@Nullable
 	@Override
-	public BlockEntity newBlockEntity(BlockPos blockPos, BlockState blockState) {
+	public BlockEntity newBlockEntity(@NotNull BlockPos blockPos, @NotNull BlockState blockState) {
 		return MessengerCrowModBlockEntities.SCARECROW.get().create(blockPos, blockState);
 	}
 
 	@Override
-	public boolean propagatesSkylightDown(BlockState state, BlockGetter reader, BlockPos pos) {
+	public boolean propagatesSkylightDown(@NotNull BlockState state, @NotNull BlockGetter reader, @NotNull BlockPos pos) {
 		return true;
 	}
 
 	@Override
-	public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
+	public int getLightBlock(@NotNull BlockState state, @NotNull BlockGetter worldIn, @NotNull BlockPos pos) {
 		return 0;
 	}
 
 	@Override
-	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
+	public @NotNull VoxelShape getShape(BlockState state, @NotNull BlockGetter world, @NotNull BlockPos pos, @NotNull CollisionContext context) {
 
 		return switch (state.getValue(FACING)) {
-			default -> Shapes.or(box(6, 0, 6, 10, 12, 10), box(4, 12, 6, 12, 23, 10), box(12, 19, 6, 24, 23, 10), box(-8, 19, 6, 4, 23, 10), box(5, 23, 6, 11, 29, 10));
-			case NORTH -> Shapes.or(box(6, 0, 6, 10, 12, 10), box(4, 12, 6, 12, 23, 10), box(-8, 19, 6, 4, 23, 10), box(12, 19, 6, 24, 23, 10), box(5, 23, 6, 11, 29, 10));
+            case NORTH -> Shapes.or(box(6, 0, 6, 10, 12, 10), box(4, 12, 6, 12, 23, 10), box(-8, 19, 6, 4, 23, 10), box(12, 19, 6, 24, 23, 10), box(5, 23, 6, 11, 29, 10));
 			case EAST -> Shapes.or(box(6, 0, 6, 10, 12, 10), box(6, 12, 4, 10, 23, 12), box(6, 19, -8, 10, 23, 4), box(6, 19, 12, 10, 23, 24), box(6, 23, 5, 10, 29, 11));
 			case WEST -> Shapes.or(box(6, 0, 6, 10, 12, 10), box(6, 12, 4, 10, 23, 12), box(6, 19, 12, 10, 23, 24), box(6, 19, -8, 10, 23, 4), box(6, 23, 5, 10, 29, 11));
-		};
+            default -> Shapes.or(box(6, 0, 6, 10, 12, 10), box(4, 12, 6, 12, 23, 10), box(12, 19, 6, 24, 23, 10), box(-8, 19, 6, 4, 23, 10), box(5, 23, 6, 11, 29, 10));
+        };
 	}
 
 	@Override
@@ -122,7 +116,7 @@ public class ScarecrowBlock extends BaseEntityBlock implements EntityBlock {
 	}
 
 	@Override
-	public List<ItemStack> getDrops(BlockState state, LootParams.Builder builder) {
+	public List<ItemStack> getDrops(@NotNull BlockState state, LootParams.@NotNull Builder builder) {
 		List<ItemStack> dropsOriginal = super.getDrops(state, builder);
 		if (!dropsOriginal.isEmpty())
 			return dropsOriginal;
@@ -130,7 +124,7 @@ public class ScarecrowBlock extends BaseEntityBlock implements EntityBlock {
 	}
 
 	@Override
-	public InteractionResult use(BlockState blockstate, Level world, BlockPos pos, Player entity, InteractionHand hand, BlockHitResult hit) {
+	public InteractionResult use(@NotNull BlockState blockstate, @NotNull Level world, @NotNull BlockPos pos, @NotNull Player entity, @NotNull InteractionHand hand, @NotNull BlockHitResult hit) {
 		super.use(blockstate, world, pos, entity, hand, hit);
 		int x = pos.getX();
 		int y = pos.getY();
@@ -144,80 +138,70 @@ public class ScarecrowBlock extends BaseEntityBlock implements EntityBlock {
 		return InteractionResult.SUCCESS;
 	}
 
-	public static void handleLighting(LevelAccessor world, double x, double y, double z, BlockState blockstate, Entity entity) {
-		if (entity == null)
+	public static void handleLighting(LevelAccessor world, double x, double y, double z, BlockState blockstate, Player player) {
+		if (player.getMainHandItem().getItem() != Items.FLINT_AND_STEEL) {
 			return;
-		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Items.FLINT_AND_STEEL) {
-			if (new Object() {
-				public boolean checkGamemode(Entity _ent) {
-					if (_ent instanceof ServerPlayer _serverPlayer) {
-						return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.SURVIVAL;
-					} else if (_ent.level().isClientSide() && _ent instanceof Player _player) {
-						return Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()) != null
-								&& Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()).getGameMode() == GameType.SURVIVAL;
-					}
-					return false;
-				}
-			}.checkGamemode(entity)) {
-				{
-					ItemStack _ist = (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY);
-					if (_ist.hurt(1, RandomSource.create(), null)) {
-						_ist.shrink(1);
-						_ist.setDamageValue(0);
-					}
-				}
+		}
+
+		PlayerInfo pInfo =  Minecraft.getInstance().getConnection().getPlayerInfo(player.getGameProfile().getId());
+		if (pInfo != null && pInfo.getGameMode() == GameType.SURVIVAL) {
+			ItemStack _ist = player.getMainHandItem();
+			if (_ist.hurt(1, RandomSource.create(), null)) {
+				_ist.shrink(1);
+				_ist.setDamageValue(0);
 			}
-			if (!((blockstate.getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _getip6 ? blockstate.getValue(_getip6) : -1) == 1)) {
+		}
+
+		if (!((blockstate.getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _getip6 ? blockstate.getValue(_getip6) : -1) == 1)) {
+			{
+				int _value = 1;
+				BlockPos _pos = BlockPos.containing(x, y, z);
+				BlockState _bs = world.getBlockState(_pos);
+				if (_bs.getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _integerProp && _integerProp.getPossibleValues().contains(_value))
+					world.setBlock(_pos, _bs.setValue(_integerProp, _value), 3);
+			}
+			{
+				int _value = 1;
+				BlockPos _pos = BlockPos.containing(x, y, z);
+				BlockState _bs = world.getBlockState(_pos);
+				if (_bs.getBlock().getStateDefinition().getProperty("animation") instanceof IntegerProperty _integerProp && _integerProp.getPossibleValues().contains(_value))
+					world.setBlock(_pos, _bs.setValue(_integerProp, _value), 3);
+			}
+			MessengerCrowMod.queueServerWork(20, () -> {
 				{
-					int _value = 1;
-					BlockPos _pos = BlockPos.containing(x, y, z);
-					BlockState _bs = world.getBlockState(_pos);
-					if (_bs.getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _integerProp && _integerProp.getPossibleValues().contains(_value))
-						world.setBlock(_pos, _bs.setValue(_integerProp, _value), 3);
-				}
-				{
-					int _value = 1;
+					int _value = 3;
 					BlockPos _pos = BlockPos.containing(x, y, z);
 					BlockState _bs = world.getBlockState(_pos);
 					if (_bs.getBlock().getStateDefinition().getProperty("animation") instanceof IntegerProperty _integerProp && _integerProp.getPossibleValues().contains(_value))
 						world.setBlock(_pos, _bs.setValue(_integerProp, _value), 3);
 				}
-				MessengerCrowMod.queueServerWork(20, () -> {
+			});
+			MessengerCrowMod.queueServerWork(60, () -> {
+				if (world instanceof ServerLevel _level) {
+					Entity entityToSpawn = MessengerCrowModEntities.CROW.get().spawn(_level, BlockPos.containing(x, y + 2, z), MobSpawnType.MOB_SUMMONED);
+					if (entityToSpawn != null) {
+						entityToSpawn.setDeltaMovement(0, 0, 0);
+					}
+				}
+				if (world instanceof ServerLevel _level)
+					_level.sendParticles((SimpleParticleType) (MessengerCrowModParticleTypes.CROW_TELEPORT.get()), x, (y + 2), z, 10, 1, 1, 1, 1);
+				MessengerCrowMod.queueServerWork(40, () -> {
 					{
-						int _value = 3;
+						int _value = 0;
+						BlockPos _pos = BlockPos.containing(x, y, z);
+						BlockState _bs = world.getBlockState(_pos);
+						if (_bs.getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _integerProp && _integerProp.getPossibleValues().contains(_value))
+							world.setBlock(_pos, _bs.setValue(_integerProp, _value), 3);
+					}
+					{
+						int _value = 2;
 						BlockPos _pos = BlockPos.containing(x, y, z);
 						BlockState _bs = world.getBlockState(_pos);
 						if (_bs.getBlock().getStateDefinition().getProperty("animation") instanceof IntegerProperty _integerProp && _integerProp.getPossibleValues().contains(_value))
 							world.setBlock(_pos, _bs.setValue(_integerProp, _value), 3);
 					}
 				});
-				MessengerCrowMod.queueServerWork(60, () -> {
-					if (world instanceof ServerLevel _level) {
-						Entity entityToSpawn = MessengerCrowModEntities.CROW.get().spawn(_level, BlockPos.containing(x, y + 2, z), MobSpawnType.MOB_SUMMONED);
-						if (entityToSpawn != null) {
-							entityToSpawn.setDeltaMovement(0, 0, 0);
-						}
-					}
-					if (world instanceof ServerLevel _level)
-						_level.sendParticles((SimpleParticleType) (MessengerCrowModParticleTypes.CROW_TELEPORT.get()), x, (y + 2), z, 10, 1, 1, 1, 1);
-					MessengerCrowMod.queueServerWork(40, () -> {
-						{
-							int _value = 0;
-							BlockPos _pos = BlockPos.containing(x, y, z);
-							BlockState _bs = world.getBlockState(_pos);
-							if (_bs.getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _integerProp && _integerProp.getPossibleValues().contains(_value))
-								world.setBlock(_pos, _bs.setValue(_integerProp, _value), 3);
-						}
-						{
-							int _value = 2;
-							BlockPos _pos = BlockPos.containing(x, y, z);
-							BlockState _bs = world.getBlockState(_pos);
-							if (_bs.getBlock().getStateDefinition().getProperty("animation") instanceof IntegerProperty _integerProp && _integerProp.getPossibleValues().contains(_value))
-								world.setBlock(_pos, _bs.setValue(_integerProp, _value), 3);
-						}
-					});
-				});
-			}
+			});
 		}
 	}
 }

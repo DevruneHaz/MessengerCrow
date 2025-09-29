@@ -18,6 +18,4 @@ public class MessengerCrowModBlocks {
 	public static final DeferredRegister<Block> REGISTRY = DeferredRegister.create(ForgeRegistries.BLOCKS, MessengerCrowMod.MODID);
 	public static final RegistryObject<Block> SCARECROW = REGISTRY.register("scarecrow", () -> new ScarecrowBlock());
 	public static final RegistryObject<Block> SCROLL_LECTERN = REGISTRY.register("scroll_lectern", () -> new ScrollLecternBlock());
-	// Start of user code block custom blocks
-	// End of user code block custom blocks
 }

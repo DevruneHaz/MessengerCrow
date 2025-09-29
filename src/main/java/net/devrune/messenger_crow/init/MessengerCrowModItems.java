@@ -25,6 +25,7 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+@SuppressWarnings("unused")
 public class MessengerCrowModItems {
 	public static final DeferredRegister<Item> REGISTRY = DeferredRegister.create(ForgeRegistries.ITEMS, MessengerCrowMod.MODID);
 	public static LinkedHashSet<RegistryObject<Item>> CREATIVE_TAB_ITEMS = new LinkedHashSet<>();
@@ -75,54 +76,70 @@ public class MessengerCrowModItems {
 	}
 
 	public static double getColourIndex(ItemStack itemstack) {
-		if ((itemstack.getOrCreateTag().getString("ribbon")).equals("black")) {
-			itemstack.getOrCreateTag().putString("lorecolor", "\u00A70");
-			return 1;
-		} else if ((itemstack.getOrCreateTag().getString("ribbon")).equals("blue")) {
-			itemstack.getOrCreateTag().putString("lorecolor", "\u00A71");
-			return 2;
-		} else if ((itemstack.getOrCreateTag().getString("ribbon")).equals("brown")) {
-			itemstack.getOrCreateTag().putString("lorecolor", "\u00A76");
-			return 3;
-		} else if ((itemstack.getOrCreateTag().getString("ribbon")).equals("cyan")) {
-			itemstack.getOrCreateTag().putString("lorecolor", "\u00A73");
-			return 4;
-		} else if ((itemstack.getOrCreateTag().getString("ribbon")).equals("gray")) {
-			itemstack.getOrCreateTag().putString("lorecolor", "\u00A78");
-			return 5;
-		} else if ((itemstack.getOrCreateTag().getString("ribbon")).equals("green")) {
-			itemstack.getOrCreateTag().putString("lorecolor", "\u00A72");
-			return 6;
-		} else if ((itemstack.getOrCreateTag().getString("ribbon")).equals("light_blue")) {
-			itemstack.getOrCreateTag().putString("lorecolor", "\u00A79");
-			return 7;
-		} else if ((itemstack.getOrCreateTag().getString("ribbon")).equals("light_gray")) {
-			itemstack.getOrCreateTag().putString("lorecolor", "\u00A77");
-			return 8;
-		} else if ((itemstack.getOrCreateTag().getString("ribbon")).equals("lime")) {
-			itemstack.getOrCreateTag().putString("lorecolor", "\u00A7a");
-			return 9;
-		} else if ((itemstack.getOrCreateTag().getString("ribbon")).equals("magenta")) {
-			itemstack.getOrCreateTag().putString("lorecolor", "\u00A7d");
-			return 10;
-		} else if ((itemstack.getOrCreateTag().getString("ribbon")).equals("orange")) {
-			itemstack.getOrCreateTag().putString("lorecolor", "\u00A76");
-			return 11;
-		} else if ((itemstack.getOrCreateTag().getString("ribbon")).equals("pink")) {
-			itemstack.getOrCreateTag().putString("lorecolor", "\u00A7d");
-			return 12;
-		} else if ((itemstack.getOrCreateTag().getString("ribbon")).equals("purple")) {
-			itemstack.getOrCreateTag().putString("lorecolor", "\u00A75");
-			return 13;
-		} else if ((itemstack.getOrCreateTag().getString("ribbon")).equals("red")) {
-			itemstack.getOrCreateTag().putString("lorecolor", "\u00A74");
-			return 14;
-		} else if ((itemstack.getOrCreateTag().getString("ribbon")).equals("white")) {
-			itemstack.getOrCreateTag().putString("lorecolor", "\u00A7f");
-			return 15;
-		} else if ((itemstack.getOrCreateTag().getString("ribbon")).equals("yellow")) {
-			itemstack.getOrCreateTag().putString("lorecolor", "\u00A7e");
-			return 16;
+		String ribbonColour = (itemstack.getOrCreateTag().getString("ribbon"));
+		String colourString = null;
+		int colourValue = 0;
+		switch (ribbonColour) {
+			case "black" -> {
+				colourString = "§0";
+				colourValue = 1;
+			}
+			case "blue" -> {
+				colourString = "§1";
+				colourValue = 2;
+			}
+			case "brown" -> {
+				colourString = "§6";
+				colourValue = 3;
+			}
+			case "cyan" -> {
+				colourString = "§3";
+				colourValue = 4;
+			}
+			case "gray" -> {
+				colourString = "§8";
+				colourValue = 5;
+			}
+			case "green" -> {
+				colourString = "§2";
+				colourValue = 6;
+			}
+			case "light_blue" -> {
+				colourString = "§9";
+				colourValue = 7;
+			}
+			case "light_gray" -> {
+				colourString = "§7";
+				colourValue = 8;
+			}
+			case "lime" -> {
+				colourString = "§a";
+				colourValue = 9;
+			}
+			case "magenta" -> {
+				colourString = "§d";
+				colourValue = 10;
+			}
+			case "orange" -> {
+				colourString = "§6";
+				colourValue = 11;
+			}
+			case "pink" -> {
+				colourString = "§d";
+				colourValue = 12;
+			}
+			case "purple" -> {
+				colourString = "§5";
+				colourValue = 13;
+			}
+			case "red" -> {
+				colourString = "§4";
+				colourValue = 14;
+			}
+			case "white" -> {
+				colourString = "§f";
+				colourValue = 15;
+			}
 		}
 		return 0;
 	}

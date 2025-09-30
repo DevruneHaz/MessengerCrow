@@ -2,6 +2,7 @@ package net.devrune.messenger_crow.init;
 
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Rarity;
+import net.minecraft.world.level.ItemLike;
 import net.minecraftforge.registries.RegistryObject;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.DeferredRegister;
@@ -28,35 +29,61 @@ import java.util.function.Supplier;
 @SuppressWarnings("unused")
 public class MessengerCrowModItems {
 	public static final DeferredRegister<Item> REGISTRY = DeferredRegister.create(ForgeRegistries.ITEMS, MessengerCrowMod.MODID);
-	public static LinkedHashSet<RegistryObject<Item>> CREATIVE_TAB_ITEMS = new LinkedHashSet<>();
+	public static LinkedHashSet<Supplier<? extends ItemStack>> CREATIVE_TAB_ITEMS = new LinkedHashSet<>();
 
-	public static RegistryObject<Item> registerWithTab(RegistryObject<Item> i) {
-		CREATIVE_TAB_ITEMS.add(i);
+	public static <V extends ItemLike, T extends Supplier<V>> T registerWithTab(T i) {
+		CREATIVE_TAB_ITEMS.add(() -> new ItemStack(i.get()));
 		return i;
 	}
 
-	public static final RegistryObject<Item> SCROLL = REGISTRY.register("scroll", ScrollItem::new);
-	public static final RegistryObject<Item> CROW_FEATHER = REGISTRY.register("crow_feather", withProperties((p) -> p.stacksTo(64).rarity(Rarity.COMMON)));
-	public static final RegistryObject<Item> SCARECROW = REGISTRY.register(MessengerCrowModBlocks.SCARECROW.getId().getPath(), () -> new ScarecrowDisplayItem(MessengerCrowModBlocks.SCARECROW.get(), new Item.Properties()));
-	public static final RegistryObject<Item> FEATHER_FAN = REGISTRY.register("feather_fan", FeatherFanItem::new);
-	public static final RegistryObject<Item> BLACK_RIBBON = REGISTRY.register("black_ribbon", withProperties());
-	public static final RegistryObject<Item> BLUE_RIBBON = REGISTRY.register("blue_ribbon", withProperties());
-	public static final RegistryObject<Item> BROWN_RIBBON = REGISTRY.register("brown_ribbon", withProperties());
-	public static final RegistryObject<Item> CYAN_RIBBON = REGISTRY.register("cyan_ribbon", withProperties());
-	public static final RegistryObject<Item> GRAY_RIBBON = REGISTRY.register("gray_ribbon", withProperties());
-	public static final RegistryObject<Item> GREEN_RIBBON = REGISTRY.register("green_ribbon", withProperties());
-	public static final RegistryObject<Item> LIGHT_BLUE_RIBBON = REGISTRY.register("light_blue_ribbon", withProperties());
-	public static final RegistryObject<Item> LIGHT_GRAY_RIBBON = REGISTRY.register("light_gray_ribbon", withProperties());
-	public static final RegistryObject<Item> LIME_RIBBON = REGISTRY.register("lime_ribbon", withProperties());
-	public static final RegistryObject<Item> MAGENTA_RIBBON = REGISTRY.register("magenta_ribbon", withProperties());
-	public static final RegistryObject<Item> ORANGE_RIBBON = REGISTRY.register("orange_ribbon", withProperties());
-	public static final RegistryObject<Item> PINK_RIBBON = REGISTRY.register("pink_ribbon", withProperties());
-	public static final RegistryObject<Item> PURPLE_RIBBON = REGISTRY.register("purple_ribbon", withProperties());
-	public static final RegistryObject<Item> RED_RIBBON = REGISTRY.register("red_ribbon", withProperties());
-	public static final RegistryObject<Item> WHITE_RIBBON = REGISTRY.register("white_ribbon", withProperties());
-	public static final RegistryObject<Item> YELLOW_RIBBON = REGISTRY.register("yellow_ribbon", withProperties());
-	public static final RegistryObject<Item> PHANTOM_CROW_FEATHER = REGISTRY.register("phantom_crow_feather", withProperties((p) -> p.stacksTo(64).rarity(Rarity.COMMON)));
-	public static final RegistryObject<Item> CROW_SKULL_MASK_HELMET = REGISTRY.register("crow_skull_mask_helmet", CrowSkullMaskItem.Helmet::new);
+	public static final RegistryObject<Item> SCROLL = registerWithTab(REGISTRY.register("scroll", ScrollItem::new));
+
+	private static ItemStack createScroll(String colour) {
+		ItemStack is = new ItemStack(SCROLL.get());
+		is.getOrCreateTag().putString("ribbon", colour);
+		return is;
+	}
+	static {
+		CREATIVE_TAB_ITEMS.add(() -> createScroll("black"));
+		CREATIVE_TAB_ITEMS.add(() -> createScroll("blue"));
+		CREATIVE_TAB_ITEMS.add(() -> createScroll("brown"));
+		CREATIVE_TAB_ITEMS.add(() -> createScroll("cyan"));
+		CREATIVE_TAB_ITEMS.add(() -> createScroll("gray"));
+		CREATIVE_TAB_ITEMS.add(() -> createScroll("green"));
+		CREATIVE_TAB_ITEMS.add(() -> createScroll("light_blue"));
+		CREATIVE_TAB_ITEMS.add(() -> createScroll("light_gray"));
+		CREATIVE_TAB_ITEMS.add(() -> createScroll("lime"));
+		CREATIVE_TAB_ITEMS.add(() -> createScroll("magenta"));
+		CREATIVE_TAB_ITEMS.add(() -> createScroll("orange"));
+		CREATIVE_TAB_ITEMS.add(() -> createScroll("pink"));
+		CREATIVE_TAB_ITEMS.add(() -> createScroll("purple"));
+		CREATIVE_TAB_ITEMS.add(() -> createScroll("red"));
+		CREATIVE_TAB_ITEMS.add(() -> createScroll("white"));
+		CREATIVE_TAB_ITEMS.add(() -> createScroll("yellow"));
+	}
+
+
+	public static final RegistryObject<Item> CROW_FEATHER = registerWithTab(REGISTRY.register("crow_feather", withProperties((p) -> p.stacksTo(64).rarity(Rarity.COMMON))));
+	public static final RegistryObject<Item> SCARECROW = registerWithTab(REGISTRY.register(MessengerCrowModBlocks.SCARECROW.getId().getPath(), () -> new ScarecrowDisplayItem(MessengerCrowModBlocks.SCARECROW.get(), new Item.Properties())));
+	public static final RegistryObject<Item> FEATHER_FAN = registerWithTab(REGISTRY.register("feather_fan", FeatherFanItem::new));
+	public static final RegistryObject<Item> BLACK_RIBBON = registerWithTab(REGISTRY.register("black_ribbon", withProperties()));
+	public static final RegistryObject<Item> BLUE_RIBBON = registerWithTab(REGISTRY.register("blue_ribbon", withProperties()));
+	public static final RegistryObject<Item> BROWN_RIBBON = registerWithTab(REGISTRY.register("brown_ribbon", withProperties()));
+	public static final RegistryObject<Item> CYAN_RIBBON = registerWithTab(REGISTRY.register("cyan_ribbon", withProperties()));
+	public static final RegistryObject<Item> GRAY_RIBBON = registerWithTab(REGISTRY.register("gray_ribbon", withProperties()));
+	public static final RegistryObject<Item> GREEN_RIBBON = registerWithTab(REGISTRY.register("green_ribbon", withProperties()));
+	public static final RegistryObject<Item> LIGHT_BLUE_RIBBON = registerWithTab(REGISTRY.register("light_blue_ribbon", withProperties()));
+	public static final RegistryObject<Item> LIGHT_GRAY_RIBBON = registerWithTab(REGISTRY.register("light_gray_ribbon", withProperties()));
+	public static final RegistryObject<Item> LIME_RIBBON = registerWithTab(REGISTRY.register("lime_ribbon", withProperties()));
+	public static final RegistryObject<Item> MAGENTA_RIBBON = registerWithTab(REGISTRY.register("magenta_ribbon", withProperties()));
+	public static final RegistryObject<Item> ORANGE_RIBBON = registerWithTab(REGISTRY.register("orange_ribbon", withProperties()));
+	public static final RegistryObject<Item> PINK_RIBBON = registerWithTab(REGISTRY.register("pink_ribbon", withProperties()));
+	public static final RegistryObject<Item> PURPLE_RIBBON = registerWithTab(REGISTRY.register("purple_ribbon", withProperties()));
+	public static final RegistryObject<Item> RED_RIBBON = registerWithTab(REGISTRY.register("red_ribbon", withProperties()));
+	public static final RegistryObject<Item> WHITE_RIBBON = registerWithTab(REGISTRY.register("white_ribbon", withProperties()));
+	public static final RegistryObject<Item> YELLOW_RIBBON = registerWithTab(REGISTRY.register("yellow_ribbon", withProperties()));
+	public static final RegistryObject<Item> PHANTOM_CROW_FEATHER = registerWithTab(REGISTRY.register("phantom_crow_feather", withProperties((p) -> p.stacksTo(64).rarity(Rarity.COMMON))));
+	public static final RegistryObject<Item> CROW_SKULL_MASK_HELMET = registerWithTab(REGISTRY.register("crow_skull_mask_helmet", CrowSkullMaskItem.Helmet::new));
 
 
 	public static Supplier<Item> withProperties() {

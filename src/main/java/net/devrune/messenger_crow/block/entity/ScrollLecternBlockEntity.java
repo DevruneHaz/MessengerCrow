@@ -1,12 +1,5 @@
 package net.devrune.messenger_crow.block.entity;
 
-import net.devrune.messenger_crow.MessengerCrowMod;
-import net.devrune.messenger_crow.block.renderer.ScrollLecternTileRenderer;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.client.event.EntityRenderersEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
 import software.bernie.geckolib.util.GeckoLibUtil;
 import software.bernie.geckolib.core.object.PlayState;
 import software.bernie.geckolib.core.animation.RawAnimation;
@@ -205,16 +198,5 @@ public class ScrollLecternBlockEntity extends RandomizableContainerBlockEntity i
 		super.setRemoved();
 		for (LazyOptional<? extends IItemHandler> handler : handlers)
 			handler.invalidate();
-	}
-
-
-	@Mod.EventBusSubscriber(modid = MessengerCrowMod.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
-	@SuppressWarnings("unused")
-	public static class ClientEvents {
-		@OnlyIn(Dist.CLIENT)
-		@SubscribeEvent
-		public static void registerRenderers(EntityRenderersEvent.RegisterRenderers event) {
-			event.registerBlockEntityRenderer(MessengerCrowModBlockEntities.SCROLL_LECTERN.get(), context -> new ScrollLecternTileRenderer());
-		}
 	}
 }

@@ -19,8 +19,7 @@ public class ScarecrowBlockModel extends GeoModel<ScarecrowBlockEntity> {
 
 	@Override
 	public ResourceLocation getTextureResource(ScarecrowBlockEntity animatable) {
-		final int blockstate = animatable.blockstateNew;
-		if (blockstate == 1)
+		if (animatable.blockstateNew)
 			return new ResourceLocation("messenger_crow", "textures/block/scarecrow_lit.png");
 		return new ResourceLocation("messenger_crow", "textures/block/scarecrow.png");
 	}

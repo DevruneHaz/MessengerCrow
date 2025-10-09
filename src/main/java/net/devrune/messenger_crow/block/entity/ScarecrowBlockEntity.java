@@ -1,5 +1,6 @@
 package net.devrune.messenger_crow.block.entity;
 
+import net.minecraft.world.level.block.Block;
 import software.bernie.geckolib.util.GeckoLibUtil;
 import software.bernie.geckolib.core.object.PlayState;
 import software.bernie.geckolib.core.animation.RawAnimation;
@@ -42,15 +43,15 @@ public class ScarecrowBlockEntity extends RandomizableContainerBlockEntity imple
 	private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 	private NonNullList<ItemStack> stacks = NonNullList.withSize(9, ItemStack.EMPTY);
 	private final LazyOptional<? extends IItemHandler>[] handlers = SidedInvWrapper.create(this, Direction.values());
-	public int blockstateNew = this.getBlockState().getValue(ScarecrowBlock.BLOCKSTATE);
-	private int blockstateOld = this.getBlockState().getValue(ScarecrowBlock.BLOCKSTATE);
+	public boolean blockstateNew = this.getBlockState().getValue(ScarecrowBlock.LIT);
+	private boolean blockstateOld = this.getBlockState().getValue(ScarecrowBlock.LIT);
 
 	public ScarecrowBlockEntity(BlockPos pos, BlockState state) {
 		super(MessengerCrowModBlockEntities.SCARECROW.get(), pos, state);
 	}
 
 	private PlayState predicate(AnimationState event) {
-		blockstateNew = this.getBlockState().getValue(ScarecrowBlock.BLOCKSTATE);
+		blockstateNew = this.getBlockState().getValue(ScarecrowBlock.LIT);
 		if (blockstateOld != blockstateNew) {
 			event.getController().forceAnimationReset();
 			blockstateOld = blockstateNew;
@@ -72,8 +73,7 @@ public class ScarecrowBlockEntity extends RandomizableContainerBlockEntity imple
 				event.getController().forceAnimationReset();
 			event.getController().setAnimation(RawAnimation.begin().thenPlay(animationprocedure));
 			if (event.getController().getAnimationState() == AnimationController.State.STOPPED) {
-				if (this.getBlockState().getBlock().getStateDefinition().getProperty("animation") instanceof IntegerProperty _integerProp)
-					level.setBlock(this.getBlockPos(), this.getBlockState().setValue(_integerProp, 0), 3);
+				level.setBlock(this.getBlockPos(), this.getBlockState().setValue(ScarecrowBlock.ANIMATION, 0), Block.UPDATE_ALL);
 				event.getController().forceAnimationReset();
 			}
 		} else if (animationprocedure.equals("0")) {
@@ -86,8 +86,8 @@ public class ScarecrowBlockEntity extends RandomizableContainerBlockEntity imple
 
 	@Override
 	public void registerControllers(AnimatableManager.ControllerRegistrar data) {
-		data.add(new AnimationController<ScarecrowBlockEntity>(this, "controller", 0, this::predicate));
-		data.add(new AnimationController<ScarecrowBlockEntity>(this, "procedurecontroller", 0, this::procedurePredicate));
+		data.add(new AnimationController<>(this, "controller", 0, this::predicate));
+		data.add(new AnimationController<>(this, "procedurecontroller", 0, this::procedurePredicate));
 	}
 
 	@Override

@@ -1,4 +1,3 @@
-
 package net.devrune.messenger_crow.block;
 
 import net.devrune.messenger_crow.MessengerCrowMod;
@@ -15,6 +14,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.level.GameType;
 import net.minecraft.world.level.LevelAccessor;
 
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.CollisionContext;
@@ -53,16 +53,16 @@ import java.util.List;
 import java.util.Collections;
 
 public class ScarecrowBlock extends BaseEntityBlock implements EntityBlock {
-	public static final IntegerProperty BLOCKSTATE = IntegerProperty.create("blockstate", 0, 1);
-	public static final IntegerProperty ANIMATION = IntegerProperty.create("animation", 0, (int) 3);
+	public static final BooleanProperty LIT = BooleanProperty.create("lit");
+	public static final IntegerProperty ANIMATION = IntegerProperty.create("animation", 0, 3);
 	public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
 
 	public ScarecrowBlock() {
 		super(BlockBehaviour.Properties.of()
-				.sound(SoundType.WOOD).strength(2f).lightLevel(s -> s.getValue(BLOCKSTATE) == 1 ? 6 : 0)
+				.sound(SoundType.WOOD).strength(2f).lightLevel(s -> s.getValue(LIT) ? 6 : 0)
 				.noOcclusion()
 				.isRedstoneConductor((bs, br, bp) -> false));
-		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
+		this.registerDefaultState(this.defaultBlockState().setValue(FACING, Direction.NORTH).setValue(LIT, false));
 	}
 
 	@Override
@@ -99,7 +99,7 @@ public class ScarecrowBlock extends BaseEntityBlock implements EntityBlock {
 
 	@Override
 	protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-		builder.add(ANIMATION, FACING, BLOCKSTATE);
+		builder.add(ANIMATION, FACING, LIT);
 	}
 
 	@Override
@@ -129,10 +129,6 @@ public class ScarecrowBlock extends BaseEntityBlock implements EntityBlock {
 		int x = pos.getX();
 		int y = pos.getY();
 		int z = pos.getZ();
-		double hitX = hit.getLocation().x;
-		double hitY = hit.getLocation().y;
-		double hitZ = hit.getLocation().z;
-		Direction direction = hit.getDirection();
 
 		handleLighting(world, x, y, z, blockstate, entity);
 		return InteractionResult.SUCCESS;
@@ -152,55 +148,27 @@ public class ScarecrowBlock extends BaseEntityBlock implements EntityBlock {
 			}
 		}
 
-		if (!((blockstate.getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _getip6 ? blockstate.getValue(_getip6) : -1) == 1)) {
-			{
-				int _value = 1;
-				BlockPos _pos = BlockPos.containing(x, y, z);
-				BlockState _bs = world.getBlockState(_pos);
-				if (_bs.getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _integerProp && _integerProp.getPossibleValues().contains(_value))
-					world.setBlock(_pos, _bs.setValue(_integerProp, _value), 3);
-			}
-			{
-				int _value = 1;
-				BlockPos _pos = BlockPos.containing(x, y, z);
-				BlockState _bs = world.getBlockState(_pos);
-				if (_bs.getBlock().getStateDefinition().getProperty("animation") instanceof IntegerProperty _integerProp && _integerProp.getPossibleValues().contains(_value))
-					world.setBlock(_pos, _bs.setValue(_integerProp, _value), 3);
-			}
+		if (!blockstate.getValue(LIT)) {
+			BlockPos _pos = BlockPos.containing(x, y, z);
+			BlockState _bs = world.getBlockState(_pos);
+			world.setBlock(_pos, _bs.setValue(LIT, true).setValue(ANIMATION, 1), Block.UPDATE_ALL);
+
 			MessengerCrowMod.queueServerWork(20, () -> {
-				{
-					int _value = 3;
-					BlockPos _pos = BlockPos.containing(x, y, z);
-					BlockState _bs = world.getBlockState(_pos);
-					if (_bs.getBlock().getStateDefinition().getProperty("animation") instanceof IntegerProperty _integerProp && _integerProp.getPossibleValues().contains(_value))
-						world.setBlock(_pos, _bs.setValue(_integerProp, _value), 3);
-				}
+				world.setBlock(_pos, world.getBlockState(_pos).setValue(ANIMATION, 3), Block.UPDATE_ALL);
 			});
+
 			MessengerCrowMod.queueServerWork(60, () -> {
 				if (world instanceof ServerLevel _level) {
 					Entity entityToSpawn = MessengerCrowModEntities.CROW.get().spawn(_level, BlockPos.containing(x, y + 2, z), MobSpawnType.MOB_SUMMONED);
 					if (entityToSpawn != null) {
 						entityToSpawn.setDeltaMovement(0, 0, 0);
+						_level.sendParticles((MessengerCrowModParticleTypes.CROW_TELEPORT.get()), x, (y + 2), z, 10, 1, 1, 1, 1);
 					}
 				}
-				if (world instanceof ServerLevel _level)
-					_level.sendParticles((SimpleParticleType) (MessengerCrowModParticleTypes.CROW_TELEPORT.get()), x, (y + 2), z, 10, 1, 1, 1, 1);
-				MessengerCrowMod.queueServerWork(40, () -> {
-					{
-						int _value = 0;
-						BlockPos _pos = BlockPos.containing(x, y, z);
-						BlockState _bs = world.getBlockState(_pos);
-						if (_bs.getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _integerProp && _integerProp.getPossibleValues().contains(_value))
-							world.setBlock(_pos, _bs.setValue(_integerProp, _value), 3);
-					}
-					{
-						int _value = 2;
-						BlockPos _pos = BlockPos.containing(x, y, z);
-						BlockState _bs = world.getBlockState(_pos);
-						if (_bs.getBlock().getStateDefinition().getProperty("animation") instanceof IntegerProperty _integerProp && _integerProp.getPossibleValues().contains(_value))
-							world.setBlock(_pos, _bs.setValue(_integerProp, _value), 3);
-					}
-				});
+			});
+
+			MessengerCrowMod.queueServerWork(100, () -> {
+				world.setBlock(_pos, world.getBlockState(_pos).setValue(LIT, false).setValue(ANIMATION, 2), Block.UPDATE_ALL);
 			});
 		}
 	}
